@@ -2,6 +2,12 @@ namespace $ {
 
 	$mol_style_define( $hd_iq , {
 		
+		Head: {
+			justify: {
+				content: 'space-between',
+			},
+		},
+		
 		Score: {
 			color: $mol_theme.special,
 			textShadow: '0 0',

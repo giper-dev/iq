@@ -11,12 +11,20 @@ $hd_iq $mol_page
 			key *
 				left?event <=> left?event
 				right?event <=> right?event
-	tools /
+	head /
+		<= Caption $mol_view sub /
+			<= Share $mol_button_share
+			<= Title
 		<= Score $mol_chip sub / <= score
-		<= Share $mol_button_share
-		<= Lights $mol_lights_toggle
+		<= Tools
+	tools /
 		<= Sources $mol_link_source
-			uri \https://github.com/hyoo-ru/iq.hyoo.ru/
+			uri \https://github.com/hyoo-ru/iq.hd4.ru/
+		<= Donate $mol_link_donate
+			uri \https://boosty.to/hyoo
+		<= Support $mol_link_support
+			uri \https://t.me/hd4ru/137
+		<= Lights $mol_lights_toggle
 	body_content /
 		<= Score_final $mol_paragraph sub / <= score_final \
 		<= Body_content
