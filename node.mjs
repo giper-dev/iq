@@ -8878,7 +8878,7 @@ var $;
 		}
 		Sources(){
 			const obj = new this.$.$mol_link_source();
-			(obj.uri) = () => ("https://github.com/hyoo-ru/iq.hd4.ru/");
+			(obj.uri) = () => ("https://github.com/hd4ru/iq/");
 			return obj;
 		}
 		Donate(){

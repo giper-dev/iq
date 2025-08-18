@@ -603,7 +603,7 @@ $hd_iq $mol_page
 		<= Tools
 	tools /
 		<= Sources $mol_link_source
-			uri \https://github.com/hyoo-ru/iq.hd4.ru/
+			uri \https://github.com/hd4ru/iq/
 		<= Donate $mol_link_donate
 			uri \https://boosty.to/hyoo
 		<= Support $mol_link_support
