@@ -1,0 +1,14 @@
+{
+	"$hd_iq_description": "Жми кнопки, чтобы увеличить счёт!",
+	"$hd_iq_left_title": "Лево",
+	"$hd_iq_ranks_L": "Хитрая Жопа",
+	"$hd_iq_ranks_M": "Нормис",
+	"$hd_iq_ranks_S": "Жопо-головый",
+	"$hd_iq_ranks_XL": "Мега Мозг",
+	"$hd_iq_ranks_XS": "Без-мозглый",
+	"$hd_iq_right_title": "Право",
+	"$hd_iq_title": "Гипер IQ",
+	"$mol_button_share_hint": "Поделиться",
+	"$mol_lights_toggle_hint": "Переключить освещение",
+	"$mol_link_source_hint": "Исходные коды"
+}
