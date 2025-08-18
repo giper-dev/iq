@@ -1,11 +1,11 @@
 {
-	"$hyoo_iq_title": "Гипер IQ",
-	"$hyoo_iq_left_title": "Лево",
-	"$hyoo_iq_right_title": "Право",
-	"$hyoo_iq_description": "Жми кнопки, чтобы увеличить счёт!",
-	"$hyoo_iq_ranks_XL": "Мега Мозг",
-	"$hyoo_iq_ranks_L": "Хитрая Жопа",
-	"$hyoo_iq_ranks_M": "Нормис",
-	"$hyoo_iq_ranks_S": "Жопо-головый",
-	"$hyoo_iq_ranks_XS": "Без-мозглый"
+	"$hd_iq_title": "Гипер IQ",
+	"$hd_iq_left_title": "Лево",
+	"$hd_iq_right_title": "Право",
+	"$hd_iq_description": "Жми кнопки, чтобы увеличить счёт!",
+	"$hd_iq_ranks_XL": "Мега Мозг",
+	"$hd_iq_ranks_L": "Хитрая Жопа",
+	"$hd_iq_ranks_M": "Нормис",
+	"$hd_iq_ranks_S": "Жопо-головый",
+	"$hd_iq_ranks_XS": "Без-мозглый"
 }

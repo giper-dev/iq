@@ -3,7 +3,7 @@ namespace $ {
 
 		'Empty brain'() {
 		
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 		
 			$mol_assert_equal( brain.population() , 1 )
 			$mol_assert_equal( brain.predict( [] ) , 0 )
@@ -12,7 +12,7 @@ namespace $ {
 
 		'Root switch'() {
 		
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.learn( 1 , [] )
 		
 			$mol_assert_equal( brain.population() , 1 )
@@ -24,7 +24,7 @@ namespace $ {
 
 		'Right way'() {
 			
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.learn( 1 , [ 1 ] )
 			
 			$mol_assert_equal( brain.population() , 2 )
@@ -35,7 +35,7 @@ namespace $ {
 
 		'Left way'() {
 			
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.learn( 1 , [ 0 ] )
 
 			$mol_assert_equal( brain.population() , 2 )
@@ -46,7 +46,7 @@ namespace $ {
 
 		'Both way'() {
 		
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.learn( 1 , [ 1 ] )
 			brain.learn( 1 , [ 0 ] )
 		
@@ -59,7 +59,7 @@ namespace $ {
 
 		'Deep no switch'() {
 		
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.learn( 1 , [ 1 ] )
 			brain.learn( 1 , [ 1 , 1 ] )
 		
@@ -69,7 +69,7 @@ namespace $ {
 		
 		'Deep switch'() {
 			
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.learn( 1 , [ 1 ] )
 			brain.learn( 0 , [ 0 , 1 ] )
 			
@@ -84,7 +84,7 @@ namespace $ {
 
 		'Study history'() {
 			
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.study( [ 1, 0, 1, 1 ] )
 			
 			$mol_assert_equal( brain.predict( [] ) , 1 )
@@ -97,7 +97,7 @@ namespace $ {
 
 		'Non boolean'() {
 			
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.study( [ 1, 2, 3, 1 ] )
 			
 			$mol_assert_equal( brain.predict( [] ) , 1 )
@@ -110,7 +110,7 @@ namespace $ {
 
 		'Finite sequence generation'() {
 			
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.study( [ 1, 2, 3, 4 ] )
 			
 			$mol_assert_equal( brain.generate( 5, [ 2 ] ) , [ 3, 4 ] )
@@ -119,7 +119,7 @@ namespace $ {
 
 		'Limited infinite sequence generation'() {
 			
-			const brain = new $hyoo_iq_neuron(0)
+			const brain = new $hd_iq_neuron(0)
 			brain.study( [ 1, 2, 3, 1 ] )
 			
 			$mol_assert_equal( brain.generate( 5, [ 1 ] ) , [ 2, 3, 1, 2, 3 ] )
@@ -128,7 +128,7 @@ namespace $ {
 
 		'String generation'() {
 			
-			const brain = new $hyoo_iq_neuron(' ')
+			const brain = new $hd_iq_neuron(' ')
 			brain.remember( 'hello funny world' )
 			brain.remember( 'world in the fire' )
 			

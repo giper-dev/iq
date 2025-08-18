@@ -1,8 +1,6 @@
 namespace $ {
 
-	const { per , rem } = $mol_style_unit
-
-	$mol_style_define( $hyoo_iq , {
+	$mol_style_define( $hd_iq , {
 		
 		Score: {
 			color: $mol_theme.special,
@@ -30,12 +28,13 @@ namespace $ {
 			'>': {
 				$mol_button: {
 					flex: {
-						basis: per(10),
+						basis: '10%',
 						shrink: 1,
 						grow: 1,
 					},
-					justifyContent: 'center',
-					userSelect: 'none',
+					justify: {
+						content: 'center',
+					},
 				},
 			},
 		},
