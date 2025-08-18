@@ -1310,23 +1310,6 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
-
-	export class $mol_chip extends $mol_view {
-		hint( ): string
-		minimal_height( ): number
-		attr( ): ({ 
-			'title': ReturnType< $mol_chip['hint'] >,
-		})  & ReturnType< $mol_view['attr'] >
-		sub( ): readonly(any)[]
-	}
-	
-}
-
-//# sourceMappingURL=chip.view.tree.d.ts.map
-declare namespace $.$$ {
-}
-
-declare namespace $ {
     let $mol_layer: Record<"focus" | "float" | "hover" | "speck" | "popup", $mol_style_func<"var", unknown>>;
 }
 
@@ -1822,80 +1805,20 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
-}
 
-declare namespace $ {
-
-	type $mol_view__sub_mol_check_1 = $mol_type_enforce<
-		readonly(any)[]
-		,
-		ReturnType< $mol_view['sub'] >
-	>
-	export class $mol_check extends $mol_button_minor {
-		checked( next?: boolean ): boolean
-		aria_checked( ): string
-		aria_role( ): string
-		Icon( ): any
-		title( ): string
-		Title( ): $mol_view
-		label( ): readonly(any)[]
-		attr( ): ({ 
-			'mol_check_checked': ReturnType< $mol_check['checked'] >,
-			'aria-checked': ReturnType< $mol_check['aria_checked'] >,
-			'role': ReturnType< $mol_check['aria_role'] >,
-		})  & ReturnType< $mol_button_minor['attr'] >
-		sub( ): readonly($mol_view_content)[]
-	}
-	
-}
-
-//# sourceMappingURL=check.view.tree.d.ts.map
-declare namespace $.$$ {
-    class $mol_check extends $.$mol_check {
-        click(next?: Event): void;
-        sub(): readonly $mol_view_content[];
-        label(): readonly any[];
-        aria_checked(): string;
-    }
-}
-
-declare namespace $ {
-}
-
-declare namespace $ {
-
-	export class $mol_check_icon extends $mol_check {
-	}
-	
-}
-
-//# sourceMappingURL=icon.view.tree.d.ts.map
-declare namespace $ {
-
-	export class $mol_icon_brightness_4 extends $mol_icon {
-		path( ): string
-	}
-	
-}
-
-//# sourceMappingURL=4.view.tree.d.ts.map
-declare namespace $ {
-
-	export class $mol_lights_toggle extends $mol_check_icon {
-		Lights_icon( ): $mol_icon_brightness_4
-		lights( next?: boolean ): boolean
-		Icon( ): ReturnType< $mol_lights_toggle['Lights_icon'] >
+	export class $mol_chip extends $mol_view {
 		hint( ): string
-		checked( next?: ReturnType< $mol_lights_toggle['lights'] > ): ReturnType< $mol_lights_toggle['lights'] >
+		minimal_height( ): number
+		attr( ): ({ 
+			'title': ReturnType< $mol_chip['hint'] >,
+		})  & ReturnType< $mol_view['attr'] >
+		sub( ): readonly(any)[]
 	}
 	
 }
 
-//# sourceMappingURL=toggle.view.tree.d.ts.map
+//# sourceMappingURL=chip.view.tree.d.ts.map
 declare namespace $.$$ {
-    class $mol_lights_toggle extends $.$mol_lights_toggle {
-        lights(next?: boolean): boolean;
-    }
 }
 
 declare namespace $ {
@@ -1980,6 +1903,141 @@ declare namespace $ {
 }
 
 //# sourceMappingURL=source.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_icon_gift extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=gift.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_icon_gift_outline extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=outline.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_link_donate extends $mol_link {
+		Icon( ): $mol_icon_gift_outline
+		hint( ): string
+		sub( ): readonly(any)[]
+	}
+	
+}
+
+//# sourceMappingURL=donate.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_icon_face extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=face.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_icon_face_agent extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=agent.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_link_support extends $mol_link {
+		Icon( ): $mol_icon_face_agent
+		hint( ): string
+		sub( ): readonly(any)[]
+	}
+	
+}
+
+//# sourceMappingURL=support.view.tree.d.ts.map
+declare namespace $ {
+}
+
+declare namespace $ {
+
+	type $mol_view__sub_mol_check_1 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_view['sub'] >
+	>
+	export class $mol_check extends $mol_button_minor {
+		checked( next?: boolean ): boolean
+		aria_checked( ): string
+		aria_role( ): string
+		Icon( ): any
+		title( ): string
+		Title( ): $mol_view
+		label( ): readonly(any)[]
+		attr( ): ({ 
+			'mol_check_checked': ReturnType< $mol_check['checked'] >,
+			'aria-checked': ReturnType< $mol_check['aria_checked'] >,
+			'role': ReturnType< $mol_check['aria_role'] >,
+		})  & ReturnType< $mol_button_minor['attr'] >
+		sub( ): readonly($mol_view_content)[]
+	}
+	
+}
+
+//# sourceMappingURL=check.view.tree.d.ts.map
+declare namespace $.$$ {
+    class $mol_check extends $.$mol_check {
+        click(next?: Event): void;
+        sub(): readonly $mol_view_content[];
+        label(): readonly any[];
+        aria_checked(): string;
+    }
+}
+
+declare namespace $ {
+}
+
+declare namespace $ {
+
+	export class $mol_check_icon extends $mol_check {
+	}
+	
+}
+
+//# sourceMappingURL=icon.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_icon_brightness_4 extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=4.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_lights_toggle extends $mol_check_icon {
+		Lights_icon( ): $mol_icon_brightness_4
+		lights( next?: boolean ): boolean
+		Icon( ): ReturnType< $mol_lights_toggle['Lights_icon'] >
+		hint( ): string
+		checked( next?: ReturnType< $mol_lights_toggle['lights'] > ): ReturnType< $mol_lights_toggle['lights'] >
+	}
+	
+}
+
+//# sourceMappingURL=toggle.view.tree.d.ts.map
+declare namespace $.$$ {
+    class $mol_lights_toggle extends $.$mol_lights_toggle {
+        lights(next?: boolean): boolean;
+    }
+}
+
 declare namespace $ {
 
 	export class $mol_paragraph extends $mol_view {
@@ -3117,97 +3175,112 @@ declare namespace $ {
 		,
 		ReturnType< $mol_hotkey['key'] >
 	>
-	type $mol_chip__sub_hd_iq_3 = $mol_type_enforce<
+	type $mol_view__sub_hd_iq_3 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_view['sub'] >
+	>
+	type $mol_chip__sub_hd_iq_4 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_chip['sub'] >
 	>
-	type $mol_link_source__uri_hd_iq_4 = $mol_type_enforce<
+	type $mol_link_source__uri_hd_iq_5 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_source['uri'] >
 	>
-	type $mol_paragraph__sub_hd_iq_5 = $mol_type_enforce<
+	type $mol_link_donate__uri_hd_iq_6 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_link_donate['uri'] >
+	>
+	type $mol_link_support__uri_hd_iq_7 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_link_support['uri'] >
+	>
+	type $mol_paragraph__sub_hd_iq_8 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_paragraph['sub'] >
 	>
-	type $mol_plot_group__graphs_hd_iq_6 = $mol_type_enforce<
+	type $mol_plot_group__graphs_hd_iq_9 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_plot_group['graphs'] >
 	>
-	type $mol_plot_group__series_y_hd_iq_7 = $mol_type_enforce<
+	type $mol_plot_group__series_y_hd_iq_10 = $mol_type_enforce<
 		ReturnType< $hd_iq['score_series'] >
 		,
 		ReturnType< $mol_plot_group['series_y'] >
 	>
-	type $mol_plot_fill__series_x_hd_iq_8 = $mol_type_enforce<
+	type $mol_plot_fill__series_x_hd_iq_11 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_x'] >
 	>
-	type $mol_plot_fill__series_y_hd_iq_9 = $mol_type_enforce<
+	type $mol_plot_fill__series_y_hd_iq_12 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_y'] >
 	>
-	type $mol_plot_fill__series_x_hd_iq_10 = $mol_type_enforce<
+	type $mol_plot_fill__series_x_hd_iq_13 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_x'] >
 	>
-	type $mol_plot_fill__series_y_hd_iq_11 = $mol_type_enforce<
+	type $mol_plot_fill__series_y_hd_iq_14 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_y'] >
 	>
-	type $mol_plot_ruler_vert__title_hd_iq_12 = $mol_type_enforce<
+	type $mol_plot_ruler_vert__title_hd_iq_15 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_plot_ruler_vert['title'] >
 	>
-	type $mol_plot_ruler_hor__title_hd_iq_13 = $mol_type_enforce<
+	type $mol_plot_ruler_hor__title_hd_iq_16 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_plot_ruler_hor['title'] >
 	>
-	type $mol_chart__Legend_hd_iq_14 = $mol_type_enforce<
+	type $mol_chart__Legend_hd_iq_17 = $mol_type_enforce<
 		any
 		,
 		ReturnType< $mol_chart['Legend'] >
 	>
-	type $mol_chart__graphs_hd_iq_15 = $mol_type_enforce<
+	type $mol_chart__graphs_hd_iq_18 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_chart['graphs'] >
 	>
-	type $mol_scroll__sub_hd_iq_16 = $mol_type_enforce<
+	type $mol_scroll__sub_hd_iq_19 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_scroll['sub'] >
 	>
-	type $mol_button_major__title_hd_iq_17 = $mol_type_enforce<
+	type $mol_button_major__title_hd_iq_20 = $mol_type_enforce<
 		ReturnType< $hd_iq['left_title'] >
 		,
 		ReturnType< $mol_button_major['title'] >
 	>
-	type $mol_button_major__click_hd_iq_18 = $mol_type_enforce<
+	type $mol_button_major__click_hd_iq_21 = $mol_type_enforce<
 		ReturnType< $hd_iq['left'] >
 		,
 		ReturnType< $mol_button_major['click'] >
 	>
-	type $mol_button_major__title_hd_iq_19 = $mol_type_enforce<
+	type $mol_button_major__title_hd_iq_22 = $mol_type_enforce<
 		ReturnType< $hd_iq['right_title'] >
 		,
 		ReturnType< $mol_button_major['title'] >
 	>
-	type $mol_button_major__click_hd_iq_20 = $mol_type_enforce<
+	type $mol_button_major__click_hd_iq_23 = $mol_type_enforce<
 		ReturnType< $hd_iq['right'] >
 		,
 		ReturnType< $mol_button_major['click'] >
 	>
-	type $mol_row__sub_hd_iq_21 = $mol_type_enforce<
+	type $mol_row__sub_hd_iq_24 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_row['sub'] >
@@ -3217,10 +3290,13 @@ declare namespace $ {
 		score( ): number
 		Theme( ): $mol_theme_auto
 		Hotkey( ): $mol_hotkey
-		Score( ): $mol_chip
 		Share( ): $mol_button_share
-		Lights( ): $mol_lights_toggle
+		Caption( ): $mol_view
+		Score( ): $mol_chip
 		Sources( ): $mol_link_source
+		Donate( ): $mol_link_donate
+		Support( ): $mol_link_support
+		Lights( ): $mol_lights_toggle
 		score_final( ): string
 		Score_final( ): $mol_paragraph
 		Score_line( ): $mol_plot_line
@@ -3247,6 +3323,7 @@ declare namespace $ {
 		history( next?: readonly(number)[] ): readonly(number)[]
 		auto( ): readonly(any)[]
 		plugins( ): readonly(any)[]
+		head( ): readonly(any)[]
 		tools( ): readonly(any)[]
 		body_content( ): readonly(any)[]
 		ranks( ): ({ 

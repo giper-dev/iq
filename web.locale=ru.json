@@ -10,5 +10,7 @@
 	"$hd_iq_title": "Гипер IQ",
 	"$mol_button_share_hint": "Поделиться",
 	"$mol_lights_toggle_hint": "Переключить освещение",
-	"$mol_link_source_hint": "Исходные коды"
+	"$mol_link_donate_hint": "Поблагодарить рублём",
+	"$mol_link_source_hint": "Исходные коды",
+	"$mol_link_support_hint": "Обсудить проект"
 }
