@@ -3327,11 +3327,13 @@ declare namespace $ {
 		tools( ): readonly(any)[]
 		body_content( ): readonly(any)[]
 		ranks( ): ({ 
+			'XXL': string,
 			'XL': string,
 			'L': string,
 			'M': string,
 			'S': string,
 			'XS': string,
+			'XXS': string,
 		}) 
 		body( ): readonly(any)[]
 	}

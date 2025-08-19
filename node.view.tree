@@ -613,11 +613,13 @@ $hd_iq $mol_page
 		<= Score_final $mol_paragraph sub / <= score_final \
 		<= Body_content
 	ranks *
-		XL @ \Mega Mind
-		L @ \Smart Ass
-		M @ \Normie
-		S @ \Jack Ass
-		XS @ \Brain Less
+		XXL @ \😎 Mega Mind
+		XL @ \😏 Smart Ass
+		L @ \😊 Clever
+		M @ \😐 Normie
+		S @ \😮 Stupid
+		XS @ \🥴 Jack Ass
+		XXS @ \🤪 Brain Less
 	body /
 		<= Stats $mol_chart
 			Legend null
