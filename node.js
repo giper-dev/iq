@@ -9148,13 +9148,13 @@ var $;
                     return this.ranks().XXL;
                 if (score >= +25)
                     return this.ranks().XL;
-                if (score >= +5)
+                if (score >= +10)
                     return this.ranks().L;
                 if (score <= -75)
                     return this.ranks().XXS;
                 if (score <= -25)
                     return this.ranks().XS;
-                if (score <= -5)
+                if (score <= -10)
                     return this.ranks().S;
                 return this.ranks().M;
             }
