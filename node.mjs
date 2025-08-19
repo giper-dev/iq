@@ -9227,7 +9227,7 @@ var $;
                 self: 'center',
             },
             font: {
-                family: 'monospace',
+                family: 'cursive',
                 size: `8vmin`,
             },
         },
