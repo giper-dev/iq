@@ -446,6 +446,10 @@ declare namespace $ {
 }
 
 declare namespace $ {
+    function $mol_try<Result>(handler: () => Result): Result | Error;
+}
+
+declare namespace $ {
     function $mol_fail_log(error: unknown): boolean;
 }
 
@@ -3420,7 +3424,6 @@ declare namespace $ {
 		Ruler_hor( ): $mol_plot_ruler_hor
 		Stats( ): $mol_chart
 		description( ): string
-		history_log( ): ReturnType< $hd_iq['description'] >
 		History_log( ): $mol_scroll
 		left_title( ): string
 		left( next?: any ): any
