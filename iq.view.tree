@@ -65,7 +65,6 @@ $hd_iq $mol_page
 					title \
 		<= History_log $mol_scroll
 			sub /
-				- <= history_log
 				<= description @ \Click buttons to maximize your score!
 		<= Choices $mol_row
 			sub /
