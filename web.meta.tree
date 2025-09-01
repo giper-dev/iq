@@ -20,6 +20,7 @@
 	pack canary git \https://github.com/hd4ru/canary.git
 	pack iq git \https://github.com/hd4ru/iq.git
 	pack lines git \https://github.com/hd4ru/lines.git
+	pack linguist git \https://github.com/hd4ru/linguist.git
 	pack player git \https://github.com/hd4ru/player.git
 	pack search git \https://github.com/hd4ru/search.git
 \/mol
