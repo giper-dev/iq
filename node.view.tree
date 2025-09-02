@@ -8,31 +8,14 @@ $mol_scroll $mol_view
 		^
 		scroll?event <=> event_scroll?event null
 
-$mol_page $mol_view
-	dom_name \article
-	attr *
-		^
-		tabIndex <= tabindex -1
-	sub /
-		<= Head $mol_view
-			minimal_height 64
-			dom_name \header
-			sub <= head /
-				<= Title $mol_view
-					dom_name \h1
-					sub <= title_content /
-						<= Logo null
-						<= title
-				<= Tools $mol_view
-					sub <= tools /$mol_view_content
-		<= Body $mol_scroll
-			scroll_top? => body_scroll_top?
-			sub <= body_content /
-				<= Body_content $mol_view
-					sub <= body /$mol_view
-		<= Foot $mol_view
-			dom_name \footer
-			sub <= foot /$mol_view
+$mol_book2 $mol_scroll
+	menu_title \
+	sub /$mol_view
+		^ pages <= pages_deep /$mol_view
+		^ placeholders /$mol_view
+			<= Placeholder $mol_view
+	minimal_width 0
+	Gap* $mol_view title \
 
 $mol_theme_auto $mol_plugin
 	light \$mol_theme_light
@@ -46,6 +29,59 @@ $mol_hotkey $mol_plugin
 	mod_ctrl false
 	mod_alt false
 	mod_shift false
+
+$mol_link $mol_view
+	uri \
+	dom_name \a
+	uri_off \
+	uri_native null
+	external false
+	attr *
+		^
+		href <= uri_toggle \
+		title <= hint_safe <= hint \
+		target <= target \_self
+		download <= file_name \
+		mol_link_current <= current false
+		rel <= relation \
+	sub /$mol_view_content
+		<= title
+	arg *
+	event *
+		^
+		click?event <=> click?event <=> event_click?event null
+
+$mol_embed_native $mol_scroll
+	dom_name \iframe
+	window null
+	attr *
+		^
+		src <= uri? \about:config
+	sub /
+		<= Fallback $mol_link
+			uri <= uri
+			sub /
+				<= title \
+	message *
+		hashchange? <=> uri_change? null
+
+$mol_frame $mol_embed_native
+	attr *
+		tabindex <= tabindex
+		allow <= allow \
+		src <= uri
+		srcdoc <= html null
+	fullscreen true
+	accelerometer true
+	autoplay true
+	encription true
+	gyroscope true
+	pip true
+	clipboard_read true
+	clipboard_write true
+
+$hd_space_frame $mol_frame
+	uri \http://localhost:9080/hd/space/bar/-/test.html#mol_lights={lights}/current={current}
 
 $mol_speck $mol_view
 	minimal_width 12
@@ -132,27 +168,6 @@ $mol_chip $mol_view
 		title <= hint \
 	sub /
 		<= title
-
-$mol_link $mol_view
-	uri \
-	dom_name \a
-	uri_off \
-	uri_native null
-	external false
-	attr *
-		^
-		href <= uri_toggle \
-		title <= hint_safe <= hint \
-		target <= target \_self
-		download <= file_name \
-		mol_link_current <= current false
-		rel <= relation \
-	sub /$mol_view_content
-		<= title
-	arg *
-	event *
-		^
-		click?event <=> click?event <=> event_click?event null
 
 $mol_icon_script $mol_icon path \M17.8,20C17.4,21.2 16.3,22 15,22H5C3.3,22 2,20.7 2,19V18H5L14.2,18C14.6,19.2 15.7,20 17,20H17.8M19,2H8C6.3,2 5,3.3 5,5V16H16V17C16,17.6 16.4,18 17,18H18V5C18,4.4 18.4,4 19,4C19.6,4 20,4.4 20,5V6H22V5C22,3.3 20.7,2 19,2Z
 
@@ -582,8 +597,41 @@ $mol_button_major $mol_button_minor
 
 $mol_row $mol_view
 
-$hd_iq $mol_page
-	title @ \Hyper IQ
+$mol_page $mol_view
+	dom_name \article
+	attr *
+		^
+		tabIndex <= tabindex -1
+	sub /
+		<= Head $mol_view
+			minimal_height 64
+			dom_name \header
+			sub <= head /
+				<= Title $mol_view
+					dom_name \h1
+					sub <= title_content /
+						<= Logo null
+						<= title
+				<= Tools $mol_view
+					sub <= tools /$mol_view_content
+		<= Body $mol_scroll
+			scroll_top? => body_scroll_top?
+			sub <= body_content /
+				<= Body_content $mol_view
+					sub <= body /$mol_view
+		<= Foot $mol_view
+			dom_name \footer
+			sub <= foot /$mol_view
+
+$hd_iq $mol_book2
+	ranks *
+		XXL @ \😎 Mega Mind
+		XL @ \😏 Smart Ass
+		L @ \😊 Too Clever
+		M @ \😐 Just Normie
+		S @ \😮 So Stupid
+		XS @ \🥴 Jack Ass
+		XXS @ \🤪 Brain Less
 	required 200
 	history?val /number
 	auto /
@@ -595,66 +643,66 @@ $hd_iq $mol_page
 			key *
 				left?event <=> left?event
 				right?event <=> right?event
-	head /
-		<= Caption $mol_view sub /
-			<= Share $mol_button_share
-			<= Title
-		<= Score $mol_chip sub / <= score
-		<= Tools
-	tools /
-		<= Sources $mol_link_source
-			uri \https://github.com/hd4ru/iq/
-		<= Donate $mol_link_donate
-			uri \https://boosty.to/hyoo
-		<= Support $mol_link_support
-			uri \https://t.me/hd4ru/137
-		<= Lights $mol_lights_toggle
-	body_content /
-		<= Score_final $mol_paragraph sub / <= score_final \
-		<= Body_content
-	ranks *
-		XXL @ \😎 Mega Mind
-		XL @ \😏 Smart Ass
-		L @ \😊 Too Clever
-		M @ \😐 Just Normie
-		S @ \😮 So Stupid
-		XS @ \🥴 Jack Ass
-		XXS @ \🤪 Brain Less
-	body /
-		<= Stats $mol_chart
-			Legend null
-			graphs /
-				<= Score_log $mol_plot_group
+	placeholders /
+	pages /
+		<= Space $hd_space_frame
+		<= Main $mol_page
+			title <= title @ \Hyper IQ
+			Title => Main_title
+			Tools => Main_tools
+			head /
+				<= Caption $mol_view sub /
+					<= Share $mol_button_share
+					<= Main_title
+				<= Score $mol_chip sub / <= score
+				<= Main_tools
+			tools /
+				<= Sources $mol_link_source
+					uri \https://github.com/hd4ru/iq/
+				<= Donate $mol_link_donate
+					uri \https://boosty.to/hyoo
+				<= Support $mol_link_support
+					uri \https://t.me/hd4ru/137
+				<= Lights $mol_lights_toggle
+			Body_content => Main_body_content
+			body_content /
+				<= Score_final $mol_paragraph sub / <= score_final \
+				<= Main_body_content
+			body /
+				<= Stats $mol_chart
+					Legend null
 					graphs /
-						<= Score_line $mol_plot_line
-						<= Score_fill $mol_plot_fill
-					series_y <= score_series?val /number
-				<= Bad $mol_plot_fill
-					series_x /number
-						+0
-						+100
-					series_y /number
-						-100
-						-100
-				<= Good $mol_plot_fill
-					series_x /number
-						+0
-						+100
-					series_y /number
-						+100
-						+100
-				<= Ruler_vert $mol_plot_ruler_vert
-					title \
-				<= Ruler_hor $mol_plot_ruler_hor
-					title \
-		<= History_log $mol_scroll
-			sub /
-				<= description @ \Click buttons to maximize your score!
-		<= Choices $mol_row
-			sub /
-				<= Left $mol_button_major
-					title <= left_title @ \Left
-					click?event <=> left?event null
-				<= Right $mol_button_major
-					title <= right_title @ \Right
-					click?event <=> right?event null
+						<= Score_log $mol_plot_group
+							graphs /
+								<= Score_line $mol_plot_line
+								<= Score_fill $mol_plot_fill
+							series_y <= score_series?val /number
+						<= Bad $mol_plot_fill
+							series_x /number
+								+0
+								+100
+							series_y /number
+								-100
+								-100
+						<= Good $mol_plot_fill
+							series_x /number
+								+0
+								+100
+							series_y /number
+								+100
+								+100
+						<= Ruler_vert $mol_plot_ruler_vert
+							title \
+						<= Ruler_hor $mol_plot_ruler_hor
+							title \
+				<= History_log $mol_scroll
+					sub /
+						<= description @ \Click buttons to maximize your score!
+				<= Choices $mol_row
+					sub /
+						<= Left $mol_button_major
+							title <= left_title @ \Left
+							click?event <=> left?event null
+						<= Right $mol_button_major
+							title <= right_title @ \Right
+							click?event <=> right?event null

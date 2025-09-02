@@ -16,6 +16,7 @@
 	pack yuf git \https://github.com/zerkalica/yuf.git
 	pack apxu git \https://github.com/ApxuTechTop/apxu
 \/hd
+	pack balls git \https://github.com/hd4ru/balls.git
 	pack bot git \https://github.com/hd4ru/bot.git
 	pack canary git \https://github.com/hd4ru/canary.git
 	pack iq git \https://github.com/hd4ru/iq.git
@@ -23,6 +24,7 @@
 	pack linguist git \https://github.com/hd4ru/linguist.git
 	pack player git \https://github.com/hd4ru/player.git
 	pack search git \https://github.com/hd4ru/search.git
+	pack space git \https://github.com/hd4ru/space.git
 \/mol
 	pack icon git \https://github.com/nin-jin/mol_icon.git
 \/mol/view
