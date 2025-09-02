@@ -1,7 +1,8 @@
-name: Deploy
+name: $hd_iq
 
 on:
   workflow_dispatch:
+  repository_dispatch:
   push:
   pull_request:
   schedule:
@@ -14,8 +15,7 @@ jobs:
     
     steps:
     
-    - name: Build apps
-      uses: hyoo-ru/mam_build@master2
+    - uses: hyoo-ru/mam_build@master2
       with:
         token: ${{ secrets.GH_PAT }}
         package: hd/iq
