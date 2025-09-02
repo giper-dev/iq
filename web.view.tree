@@ -81,7 +81,7 @@ $mol_frame $mol_embed_native
 	clipboard_write true
 
 $hd_space_frame $mol_frame
-	uri \http://localhost:9080/hd/space/bar/-/test.html#mol_lights={lights}/current={current}
+	uri \https://space.hd4.ru/#mol_lights={lights}/current={current}
 
 $mol_speck $mol_view
 	minimal_width 12

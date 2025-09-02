@@ -5837,7 +5837,7 @@ var $;
 ;
 	($.$hd_space_frame) = class $hd_space_frame extends ($.$mol_frame) {
 		uri(){
-			return "http://localhost:9080/hd/space/bar/-/test.html#mol_lights={lights}/current={current}";
+			return "https://space.hd4.ru/#mol_lights={lights}/current={current}";
 		}
 	};
 
