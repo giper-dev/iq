@@ -1,5 +1,12 @@
-$hd_iq $mol_page
-	title @ \Hyper IQ
+$hd_iq $mol_book2
+	ranks *
+		XXL @ \😎 Mega Mind
+		XL @ \😏 Smart Ass
+		L @ \😊 Too Clever
+		M @ \😐 Just Normie
+		S @ \😮 So Stupid
+		XS @ \🥴 Jack Ass
+		XXS @ \🤪 Brain Less
 	required 200
 	history?val /number
 	auto /
@@ -11,66 +18,66 @@ $hd_iq $mol_page
 			key *
 				left?event <=> left?event
 				right?event <=> right?event
-	head /
-		<= Caption $mol_view sub /
-			<= Share $mol_button_share
-			<= Title
-		<= Score $mol_chip sub / <= score
-		<= Tools
-	tools /
-		<= Sources $mol_link_source
-			uri \https://github.com/hd4ru/iq/
-		<= Donate $mol_link_donate
-			uri \https://boosty.to/hyoo
-		<= Support $mol_link_support
-			uri \https://t.me/hd4ru/137
-		<= Lights $mol_lights_toggle
-	body_content /
-		<= Score_final $mol_paragraph sub / <= score_final \
-		<= Body_content
-	ranks *
-		XXL @ \😎 Mega Mind
-		XL @ \😏 Smart Ass
-		L @ \😊 Too Clever
-		M @ \😐 Just Normie
-		S @ \😮 So Stupid
-		XS @ \🥴 Jack Ass
-		XXS @ \🤪 Brain Less
-	body /
-		<= Stats $mol_chart
-			Legend null
-			graphs /
-				<= Score_log $mol_plot_group
+	placeholders /
+	pages /
+		<= Space $hd_space_frame
+		<= Main $mol_page
+			title <= title @ \Hyper IQ
+			Title => Main_title
+			Tools => Main_tools
+			head /
+				<= Caption $mol_view sub /
+					<= Share $mol_button_share
+					<= Main_title
+				<= Score $mol_chip sub / <= score
+				<= Main_tools
+			tools /
+				<= Sources $mol_link_source
+					uri \https://github.com/hd4ru/iq/
+				<= Donate $mol_link_donate
+					uri \https://boosty.to/hyoo
+				<= Support $mol_link_support
+					uri \https://t.me/hd4ru/137
+				<= Lights $mol_lights_toggle
+			Body_content => Main_body_content
+			body_content /
+				<= Score_final $mol_paragraph sub / <= score_final \
+				<= Main_body_content
+			body /
+				<= Stats $mol_chart
+					Legend null
 					graphs /
-						<= Score_line $mol_plot_line
-						<= Score_fill $mol_plot_fill
-					series_y <= score_series?val /number
-				<= Bad $mol_plot_fill
-					series_x /number
-						+0
-						+100
-					series_y /number
-						-100
-						-100
-				<= Good $mol_plot_fill
-					series_x /number
-						+0
-						+100
-					series_y /number
-						+100
-						+100
-				<= Ruler_vert $mol_plot_ruler_vert
-					title \
-				<= Ruler_hor $mol_plot_ruler_hor
-					title \
-		<= History_log $mol_scroll
-			sub /
-				<= description @ \Click buttons to maximize your score!
-		<= Choices $mol_row
-			sub /
-				<= Left $mol_button_major
-					title <= left_title @ \Left
-					click?event <=> left?event null
-				<= Right $mol_button_major
-					title <= right_title @ \Right
-					click?event <=> right?event null
+						<= Score_log $mol_plot_group
+							graphs /
+								<= Score_line $mol_plot_line
+								<= Score_fill $mol_plot_fill
+							series_y <= score_series?val /number
+						<= Bad $mol_plot_fill
+							series_x /number
+								+0
+								+100
+							series_y /number
+								-100
+								-100
+						<= Good $mol_plot_fill
+							series_x /number
+								+0
+								+100
+							series_y /number
+								+100
+								+100
+						<= Ruler_vert $mol_plot_ruler_vert
+							title \
+						<= Ruler_hor $mol_plot_ruler_hor
+							title \
+				<= History_log $mol_scroll
+					sub /
+						<= description @ \Click buttons to maximize your score!
+				<= Choices $mol_row
+					sub /
+						<= Left $mol_button_major
+							title <= left_title @ \Left
+							click?event <=> left?event null
+						<= Right $mol_button_major
+							title <= right_title @ \Right
+							click?event <=> right?event null

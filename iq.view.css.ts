@@ -2,23 +2,32 @@ namespace $ {
 
 	$mol_style_define( $hd_iq , {
 		
-		Head: {
-			justify: {
-				content: 'space-between',
+		Main: {
+			
+			flex: {
+				basis: '40rem',
+				grow: 1,
 			},
+			
+			Head: {
+				justify: {
+					content: 'space-between',
+				},
+			},
+			
+			Body_content: {
+				align: {
+					self: 'stretch',
+				},
+			},
+			
 		},
-		
+
 		Score: {
 			color: $mol_theme.special,
 			textShadow: '0 0',
 		},
 		
-		Body_content: {
-			align: {
-				self: 'stretch',
-			},
-		},
-
 		History_log: {
 			display: 'flex',
 			padding: $mol_gap.block,
