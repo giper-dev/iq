@@ -26,5 +26,5 @@
 
 ```javascript
 for( let c of '101...' ) 
-$hd_iq.Root(0).choice( Number( c ) )
+$gd_iq.Root(0).choice( Number( c ) )
 ```

@@ -3994,7 +3994,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    class $hd_iq_neuron extends Map {
+    class $gd_iq_neuron extends Map {
         value;
         depth;
         constructor(value, depth = 0) {
@@ -4042,7 +4042,7 @@ var $;
             const x = pos - tail.depth;
             if (x < 0)
                 return false;
-            tail.set(history[x], new $hd_iq_neuron(next, tail.depth + 1));
+            tail.set(history[x], new $gd_iq_neuron(next, tail.depth + 1));
             return true;
         }
         locate(history, pos = history.length - 1) {
@@ -4063,7 +4063,7 @@ var $;
             return $mol_dev_format_accent($mol_dev_format_native(this), ' ', this.value);
         }
     }
-    $.$hd_iq_neuron = $hd_iq_neuron;
+    $.$gd_iq_neuron = $gd_iq_neuron;
 })($ || ($ = {}));
 
 ;
@@ -4582,9 +4582,9 @@ var $;
 })($ || ($ = {}));
 
 ;
-	($.$hd_space_frame) = class $hd_space_frame extends ($.$mol_frame) {
+	($.$gd_web_frame) = class $gd_web_frame extends ($.$mol_frame) {
 		uri(){
-			return "https://space.hd4.ru/#mol_lights={lights}/current={current}";
+			return "https://web.giper.dev/#mol_lights={lights}/current={current}";
 		}
 	};
 
@@ -4595,7 +4595,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        class $hd_space_frame extends $.$hd_space_frame {
+        class $gd_web_frame extends $.$gd_web_frame {
             uri() {
                 return super.uri()
                     .replace('{lights}', String(this.$.$mol_lights()))
@@ -4604,8 +4604,8 @@ var $;
         }
         __decorate([
             $mol_mem
-        ], $hd_space_frame.prototype, "uri", null);
-        $$.$hd_space_frame = $hd_space_frame;
+        ], $gd_web_frame.prototype, "uri", null);
+        $$.$gd_web_frame = $gd_web_frame;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 
@@ -4613,7 +4613,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_attach("hd/space/frame/frame.view.css", "/* @keyframes hd_space_frame_show {\n\tfrom {\n\t\topacity: 0;\n\t}\n}\n\n[hd_space_frame] {\n\tanimation: 5s -1s ease-in hd_space_frame_show;\n} */\n");
+    $mol_style_attach("gd/web/frame/frame.view.css", "/* @keyframes gd_web_frame_show {\n\tfrom {\n\t\topacity: 0;\n\t}\n}\n\n[gd_web_frame] {\n\tanimation: 5s -1s ease-in gd_web_frame_show;\n} */\n");
 })($ || ($ = {}));
 
 ;
@@ -4625,7 +4625,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        $mol_style_define($hd_space_frame, {
+        $mol_style_define($gd_web_frame, {
             flex: {
                 basis: '4rem',
                 shrink: 0,
@@ -8934,9 +8934,9 @@ var $;
 })($ || ($ = {}));
 
 ;
-	($.$hd_iq) = class $hd_iq extends ($.$mol_book2) {
+	($.$gd_iq) = class $gd_iq extends ($.$mol_book2) {
 		Brain(){
-			const obj = new this.$.$hd_iq_neuron(0);
+			const obj = new this.$.$gd_iq_neuron(0);
 			return obj;
 		}
 		score(){
@@ -8952,11 +8952,11 @@ var $;
 			return obj;
 		}
 		Space(){
-			const obj = new this.$.$hd_space_frame();
+			const obj = new this.$.$gd_web_frame();
 			return obj;
 		}
 		title(){
-			return (this.$.$mol_locale.text("$hd_iq_title"));
+			return (this.$.$mol_locale.text("$gd_iq_title"));
 		}
 		Main_title(){
 			return (this.Main().Title());
@@ -8980,7 +8980,7 @@ var $;
 		}
 		Sources(){
 			const obj = new this.$.$mol_link_source();
-			(obj.uri) = () => ("https://github.com/hd4ru/iq/");
+			(obj.uri) = () => ("https://github.com/giper-dev/iq/");
 			return obj;
 		}
 		Donate(){
@@ -8990,7 +8990,7 @@ var $;
 		}
 		Support(){
 			const obj = new this.$.$mol_link_support();
-			(obj.uri) = () => ("https://t.me/hd4ru/137");
+			(obj.uri) = () => ("https://t.me/giper-dev/137");
 			return obj;
 		}
 		Lights(){
@@ -9061,7 +9061,7 @@ var $;
 			return obj;
 		}
 		description(){
-			return (this.$.$mol_locale.text("$hd_iq_description"));
+			return (this.$.$mol_locale.text("$gd_iq_description"));
 		}
 		History_log(){
 			const obj = new this.$.$mol_scroll();
@@ -9069,7 +9069,7 @@ var $;
 			return obj;
 		}
 		left_title(){
-			return (this.$.$mol_locale.text("$hd_iq_left_title"));
+			return (this.$.$mol_locale.text("$gd_iq_left_title"));
 		}
 		left(next){
 			if(next !== undefined) return next;
@@ -9082,7 +9082,7 @@ var $;
 			return obj;
 		}
 		right_title(){
-			return (this.$.$mol_locale.text("$hd_iq_right_title"));
+			return (this.$.$mol_locale.text("$gd_iq_right_title"));
 		}
 		right(next){
 			if(next !== undefined) return next;
@@ -9123,13 +9123,13 @@ var $;
 		}
 		ranks(){
 			return {
-				"XXL": (this.$.$mol_locale.text("$hd_iq_ranks_XXL")), 
-				"XL": (this.$.$mol_locale.text("$hd_iq_ranks_XL")), 
-				"L": (this.$.$mol_locale.text("$hd_iq_ranks_L")), 
-				"M": (this.$.$mol_locale.text("$hd_iq_ranks_M")), 
-				"S": (this.$.$mol_locale.text("$hd_iq_ranks_S")), 
-				"XS": (this.$.$mol_locale.text("$hd_iq_ranks_XS")), 
-				"XXS": (this.$.$mol_locale.text("$hd_iq_ranks_XXS"))
+				"XXL": (this.$.$mol_locale.text("$gd_iq_ranks_XXL")), 
+				"XL": (this.$.$mol_locale.text("$gd_iq_ranks_XL")), 
+				"L": (this.$.$mol_locale.text("$gd_iq_ranks_L")), 
+				"M": (this.$.$mol_locale.text("$gd_iq_ranks_M")), 
+				"S": (this.$.$mol_locale.text("$gd_iq_ranks_S")), 
+				"XS": (this.$.$mol_locale.text("$gd_iq_ranks_XS")), 
+				"XXS": (this.$.$mol_locale.text("$gd_iq_ranks_XXS"))
 			};
 		}
 		required(){
@@ -9152,35 +9152,35 @@ var $;
 			return [(this.Space()), (this.Main())];
 		}
 	};
-	($mol_mem(($.$hd_iq.prototype), "Brain"));
-	($mol_mem(($.$hd_iq.prototype), "Theme"));
-	($mol_mem(($.$hd_iq.prototype), "Hotkey"));
-	($mol_mem(($.$hd_iq.prototype), "Space"));
-	($mol_mem(($.$hd_iq.prototype), "Share"));
-	($mol_mem(($.$hd_iq.prototype), "Caption"));
-	($mol_mem(($.$hd_iq.prototype), "Score"));
-	($mol_mem(($.$hd_iq.prototype), "Sources"));
-	($mol_mem(($.$hd_iq.prototype), "Donate"));
-	($mol_mem(($.$hd_iq.prototype), "Support"));
-	($mol_mem(($.$hd_iq.prototype), "Lights"));
-	($mol_mem(($.$hd_iq.prototype), "Score_final"));
-	($mol_mem(($.$hd_iq.prototype), "Score_line"));
-	($mol_mem(($.$hd_iq.prototype), "Score_fill"));
-	($mol_mem(($.$hd_iq.prototype), "score_series"));
-	($mol_mem(($.$hd_iq.prototype), "Score_log"));
-	($mol_mem(($.$hd_iq.prototype), "Bad"));
-	($mol_mem(($.$hd_iq.prototype), "Good"));
-	($mol_mem(($.$hd_iq.prototype), "Ruler_vert"));
-	($mol_mem(($.$hd_iq.prototype), "Ruler_hor"));
-	($mol_mem(($.$hd_iq.prototype), "Stats"));
-	($mol_mem(($.$hd_iq.prototype), "History_log"));
-	($mol_mem(($.$hd_iq.prototype), "left"));
-	($mol_mem(($.$hd_iq.prototype), "Left"));
-	($mol_mem(($.$hd_iq.prototype), "right"));
-	($mol_mem(($.$hd_iq.prototype), "Right"));
-	($mol_mem(($.$hd_iq.prototype), "Choices"));
-	($mol_mem(($.$hd_iq.prototype), "Main"));
-	($mol_mem(($.$hd_iq.prototype), "history"));
+	($mol_mem(($.$gd_iq.prototype), "Brain"));
+	($mol_mem(($.$gd_iq.prototype), "Theme"));
+	($mol_mem(($.$gd_iq.prototype), "Hotkey"));
+	($mol_mem(($.$gd_iq.prototype), "Space"));
+	($mol_mem(($.$gd_iq.prototype), "Share"));
+	($mol_mem(($.$gd_iq.prototype), "Caption"));
+	($mol_mem(($.$gd_iq.prototype), "Score"));
+	($mol_mem(($.$gd_iq.prototype), "Sources"));
+	($mol_mem(($.$gd_iq.prototype), "Donate"));
+	($mol_mem(($.$gd_iq.prototype), "Support"));
+	($mol_mem(($.$gd_iq.prototype), "Lights"));
+	($mol_mem(($.$gd_iq.prototype), "Score_final"));
+	($mol_mem(($.$gd_iq.prototype), "Score_line"));
+	($mol_mem(($.$gd_iq.prototype), "Score_fill"));
+	($mol_mem(($.$gd_iq.prototype), "score_series"));
+	($mol_mem(($.$gd_iq.prototype), "Score_log"));
+	($mol_mem(($.$gd_iq.prototype), "Bad"));
+	($mol_mem(($.$gd_iq.prototype), "Good"));
+	($mol_mem(($.$gd_iq.prototype), "Ruler_vert"));
+	($mol_mem(($.$gd_iq.prototype), "Ruler_hor"));
+	($mol_mem(($.$gd_iq.prototype), "Stats"));
+	($mol_mem(($.$gd_iq.prototype), "History_log"));
+	($mol_mem(($.$gd_iq.prototype), "left"));
+	($mol_mem(($.$gd_iq.prototype), "Left"));
+	($mol_mem(($.$gd_iq.prototype), "right"));
+	($mol_mem(($.$gd_iq.prototype), "Right"));
+	($mol_mem(($.$gd_iq.prototype), "Choices"));
+	($mol_mem(($.$gd_iq.prototype), "Main"));
+	($mol_mem(($.$gd_iq.prototype), "history"));
 
 
 ;
@@ -9306,7 +9306,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        class $hd_iq extends $.$hd_iq {
+        class $gd_iq extends $.$gd_iq {
             right() {
                 this.choice(1);
             }
@@ -9359,20 +9359,20 @@ var $;
         }
         __decorate([
             $mol_mem
-        ], $hd_iq.prototype, "history_log", null);
+        ], $gd_iq.prototype, "history_log", null);
         __decorate([
             $mol_mem
-        ], $hd_iq.prototype, "wins", null);
+        ], $gd_iq.prototype, "wins", null);
         __decorate([
             $mol_mem
-        ], $hd_iq.prototype, "score", null);
+        ], $gd_iq.prototype, "score", null);
         __decorate([
             $mol_mem
-        ], $hd_iq.prototype, "score_final", null);
+        ], $gd_iq.prototype, "score_final", null);
         __decorate([
             $mol_mem
-        ], $hd_iq.prototype, "rank", null);
-        $$.$hd_iq = $hd_iq;
+        ], $gd_iq.prototype, "rank", null);
+        $$.$gd_iq = $gd_iq;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 
@@ -9380,7 +9380,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_define($hd_iq, {
+    $mol_style_define($gd_iq, {
         Main: {
             flex: {
                 basis: '40rem',

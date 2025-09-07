@@ -1,5 +1,5 @@
 {
-  "name": "hd_iq",
+  "name": "gd_iq",
   "version": "0.0.1",
   "exports": {
     "node": {
@@ -15,8 +15,8 @@
   "browser": "./web.js",
   "types": "./web.d.ts",
   "keywords": [
-    "$hd_iq",
-    "$hd",
+    "$gd_iq",
+    "$gd",
     "$mol_book2",
     "$mol",
     "$mol_scroll",
@@ -147,13 +147,13 @@
     "$mol_style_sheet",
     "$mol_layer",
     "$mol_type_enforce",
-    "$hd_iq_neuron",
+    "$gd_iq_neuron",
     "$mol_theme_auto",
     "$mol_hotkey",
     "$mol_keyboard_code",
     "$mol_keyboard",
-    "$hd_space_frame",
-    "$hd_space",
+    "$gd_web_frame",
+    "$gd_web",
     "$mol_frame",
     "$mol_embed_native",
     "$mol_embed",

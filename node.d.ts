@@ -1480,7 +1480,7 @@ declare namespace $ {
 }
 
 declare namespace $ {
-    class $hd_iq_neuron<Value> extends Map<Value, $hd_iq_neuron<Value>> {
+    class $gd_iq_neuron<Value> extends Map<Value, $gd_iq_neuron<Value>> {
         value: Value;
         depth: number;
         constructor(value: Value, depth?: number);
@@ -1489,11 +1489,11 @@ declare namespace $ {
         remember(history: ArrayLike<Value>): boolean;
         study(history: ArrayLike<Value>): boolean;
         learn(next: Value, history: ArrayLike<Value>, pos?: number): boolean;
-        locate(history: ArrayLike<Value>, pos?: number): $hd_iq_neuron<Value>;
+        locate(history: ArrayLike<Value>, pos?: number): $gd_iq_neuron<Value>;
         population(): number;
         toJSON(): {
             val: Value;
-            way: [Value, $hd_iq_neuron<Value>][];
+            way: [Value, $gd_iq_neuron<Value>][];
         };
         [$mol_dev_format_head](): any[];
     }
@@ -1788,7 +1788,7 @@ declare namespace $ {
 
 declare namespace $ {
 
-	export class $hd_space_frame extends $mol_frame {
+	export class $gd_web_frame extends $mol_frame {
 		uri( ): string
 	}
 	
@@ -1796,7 +1796,7 @@ declare namespace $ {
 
 //# sourceMappingURL=frame.view.tree.d.ts.map
 declare namespace $.$$ {
-    class $hd_space_frame extends $.$hd_space_frame {
+    class $gd_web_frame extends $.$gd_web_frame {
         uri(): string;
     }
 }
@@ -3437,163 +3437,163 @@ declare namespace $ {
 
 declare namespace $ {
 
-	type $hd_iq_neuron__hd_iq_1 = $mol_type_enforce<
+	type $gd_iq_neuron__gd_iq_1 = $mol_type_enforce<
 		[ number ]
 		,
-		ConstructorParameters< typeof $hd_iq_neuron<number> >
+		ConstructorParameters< typeof $gd_iq_neuron<number> >
 	>
-	type $mol_hotkey__key_hd_iq_2 = $mol_type_enforce<
+	type $mol_hotkey__key_gd_iq_2 = $mol_type_enforce<
 		({ 
-			left( next?: ReturnType< $hd_iq['left'] > ): ReturnType< $hd_iq['left'] >,
-			right( next?: ReturnType< $hd_iq['right'] > ): ReturnType< $hd_iq['right'] >,
+			left( next?: ReturnType< $gd_iq['left'] > ): ReturnType< $gd_iq['left'] >,
+			right( next?: ReturnType< $gd_iq['right'] > ): ReturnType< $gd_iq['right'] >,
 		}) 
 		,
 		ReturnType< $mol_hotkey['key'] >
 	>
-	type $mol_view__sub_hd_iq_3 = $mol_type_enforce<
+	type $mol_view__sub_gd_iq_3 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_view['sub'] >
 	>
-	type $mol_chip__sub_hd_iq_4 = $mol_type_enforce<
+	type $mol_chip__sub_gd_iq_4 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_chip['sub'] >
 	>
-	type $mol_link_source__uri_hd_iq_5 = $mol_type_enforce<
+	type $mol_link_source__uri_gd_iq_5 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_source['uri'] >
 	>
-	type $mol_link_donate__uri_hd_iq_6 = $mol_type_enforce<
+	type $mol_link_donate__uri_gd_iq_6 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_donate['uri'] >
 	>
-	type $mol_link_support__uri_hd_iq_7 = $mol_type_enforce<
+	type $mol_link_support__uri_gd_iq_7 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_support['uri'] >
 	>
-	type $mol_paragraph__sub_hd_iq_8 = $mol_type_enforce<
+	type $mol_paragraph__sub_gd_iq_8 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_paragraph['sub'] >
 	>
-	type $mol_plot_group__graphs_hd_iq_9 = $mol_type_enforce<
+	type $mol_plot_group__graphs_gd_iq_9 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_plot_group['graphs'] >
 	>
-	type $mol_plot_group__series_y_hd_iq_10 = $mol_type_enforce<
-		ReturnType< $hd_iq['score_series'] >
+	type $mol_plot_group__series_y_gd_iq_10 = $mol_type_enforce<
+		ReturnType< $gd_iq['score_series'] >
 		,
 		ReturnType< $mol_plot_group['series_y'] >
 	>
-	type $mol_plot_fill__series_x_hd_iq_11 = $mol_type_enforce<
+	type $mol_plot_fill__series_x_gd_iq_11 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_x'] >
 	>
-	type $mol_plot_fill__series_y_hd_iq_12 = $mol_type_enforce<
+	type $mol_plot_fill__series_y_gd_iq_12 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_y'] >
 	>
-	type $mol_plot_fill__series_x_hd_iq_13 = $mol_type_enforce<
+	type $mol_plot_fill__series_x_gd_iq_13 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_x'] >
 	>
-	type $mol_plot_fill__series_y_hd_iq_14 = $mol_type_enforce<
+	type $mol_plot_fill__series_y_gd_iq_14 = $mol_type_enforce<
 		readonly(number)[]
 		,
 		ReturnType< $mol_plot_fill['series_y'] >
 	>
-	type $mol_plot_ruler_vert__title_hd_iq_15 = $mol_type_enforce<
+	type $mol_plot_ruler_vert__title_gd_iq_15 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_plot_ruler_vert['title'] >
 	>
-	type $mol_plot_ruler_hor__title_hd_iq_16 = $mol_type_enforce<
+	type $mol_plot_ruler_hor__title_gd_iq_16 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_plot_ruler_hor['title'] >
 	>
-	type $mol_chart__Legend_hd_iq_17 = $mol_type_enforce<
+	type $mol_chart__Legend_gd_iq_17 = $mol_type_enforce<
 		any
 		,
 		ReturnType< $mol_chart['Legend'] >
 	>
-	type $mol_chart__graphs_hd_iq_18 = $mol_type_enforce<
+	type $mol_chart__graphs_gd_iq_18 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_chart['graphs'] >
 	>
-	type $mol_scroll__sub_hd_iq_19 = $mol_type_enforce<
+	type $mol_scroll__sub_gd_iq_19 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_scroll['sub'] >
 	>
-	type $mol_button_major__title_hd_iq_20 = $mol_type_enforce<
-		ReturnType< $hd_iq['left_title'] >
+	type $mol_button_major__title_gd_iq_20 = $mol_type_enforce<
+		ReturnType< $gd_iq['left_title'] >
 		,
 		ReturnType< $mol_button_major['title'] >
 	>
-	type $mol_button_major__click_hd_iq_21 = $mol_type_enforce<
-		ReturnType< $hd_iq['left'] >
+	type $mol_button_major__click_gd_iq_21 = $mol_type_enforce<
+		ReturnType< $gd_iq['left'] >
 		,
 		ReturnType< $mol_button_major['click'] >
 	>
-	type $mol_button_major__title_hd_iq_22 = $mol_type_enforce<
-		ReturnType< $hd_iq['right_title'] >
+	type $mol_button_major__title_gd_iq_22 = $mol_type_enforce<
+		ReturnType< $gd_iq['right_title'] >
 		,
 		ReturnType< $mol_button_major['title'] >
 	>
-	type $mol_button_major__click_hd_iq_23 = $mol_type_enforce<
-		ReturnType< $hd_iq['right'] >
+	type $mol_button_major__click_gd_iq_23 = $mol_type_enforce<
+		ReturnType< $gd_iq['right'] >
 		,
 		ReturnType< $mol_button_major['click'] >
 	>
-	type $mol_row__sub_hd_iq_24 = $mol_type_enforce<
+	type $mol_row__sub_gd_iq_24 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_row['sub'] >
 	>
-	type $mol_page__title_hd_iq_25 = $mol_type_enforce<
-		ReturnType< $hd_iq['title'] >
+	type $mol_page__title_gd_iq_25 = $mol_type_enforce<
+		ReturnType< $gd_iq['title'] >
 		,
 		ReturnType< $mol_page['title'] >
 	>
-	type $mol_page__head_hd_iq_26 = $mol_type_enforce<
+	type $mol_page__head_gd_iq_26 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['head'] >
 	>
-	type $mol_page__tools_hd_iq_27 = $mol_type_enforce<
+	type $mol_page__tools_gd_iq_27 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['tools'] >
 	>
-	type $mol_page__body_content_hd_iq_28 = $mol_type_enforce<
+	type $mol_page__body_content_gd_iq_28 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['body_content'] >
 	>
-	type $mol_page__body_hd_iq_29 = $mol_type_enforce<
+	type $mol_page__body_gd_iq_29 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['body'] >
 	>
-	export class $hd_iq extends $mol_book2 {
-		Brain( ): $hd_iq_neuron<number>
+	export class $gd_iq extends $mol_book2 {
+		Brain( ): $gd_iq_neuron<number>
 		score( ): number
 		Theme( ): $mol_theme_auto
 		Hotkey( ): $mol_hotkey
-		Space( ): $hd_space_frame
+		Space( ): $gd_web_frame
 		title( ): string
-		Main_title( ): ReturnType< ReturnType< $hd_iq['Main'] >['Title'] >
-		Main_tools( ): ReturnType< ReturnType< $hd_iq['Main'] >['Tools'] >
+		Main_title( ): ReturnType< ReturnType< $gd_iq['Main'] >['Title'] >
+		Main_tools( ): ReturnType< ReturnType< $gd_iq['Main'] >['Tools'] >
 		Share( ): $mol_button_share
 		Caption( ): $mol_view
 		Score( ): $mol_chip
@@ -3601,7 +3601,7 @@ declare namespace $ {
 		Donate( ): $mol_link_donate
 		Support( ): $mol_link_support
 		Lights( ): $mol_lights_toggle
-		Main_body_content( ): ReturnType< ReturnType< $hd_iq['Main'] >['Body_content'] >
+		Main_body_content( ): ReturnType< ReturnType< $gd_iq['Main'] >['Body_content'] >
 		score_final( ): string
 		Score_final( ): $mol_paragraph
 		Score_line( ): $mol_plot_line
@@ -3644,7 +3644,7 @@ declare namespace $ {
 
 //# sourceMappingURL=iq.view.tree.d.ts.map
 declare namespace $.$$ {
-    class $hd_iq extends $.$hd_iq {
+    class $gd_iq extends $.$gd_iq {
         right(): void;
         left(): void;
         choice(next: number): void;
