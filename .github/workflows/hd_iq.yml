@@ -1,4 +1,4 @@
-name: $hd_iq
+name: $gd_iq
 
 on:
   workflow_dispatch:
@@ -18,9 +18,9 @@ jobs:
     - uses: hyoo-ru/mam_build@master2
       with:
         token: ${{ secrets.GH_PAT }}
-        package: hd/iq
+        package: gd/iq
         
     - uses: hyoo-ru/gh-deploy@v4.4.1
       if: github.ref == 'refs/heads/master'
       with:
-        folder: 'hd/iq/-'
+        folder: 'gd/iq/-'

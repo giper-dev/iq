@@ -1,4 +1,4 @@
-$hd_iq $mol_book2
+$gd_iq $mol_book2
 	ranks *
 		XXL @ \😎 Mega Mind
 		XL @ \😏 Smart Ass
@@ -10,7 +10,7 @@ $hd_iq $mol_book2
 	required 200
 	history?val /number
 	auto /
-		<= Brain $hd_iq_neuron<number> / 0
+		<= Brain $gd_iq_neuron<number> / 0
 		<= score 0
 	plugins /
 		<= Theme $mol_theme_auto
@@ -20,7 +20,7 @@ $hd_iq $mol_book2
 				right?event <=> right?event
 	placeholders /
 	pages /
-		<= Space $hd_space_frame
+		<= Space $gd_web_frame
 		<= Main $mol_page
 			title <= title @ \Hyper IQ
 			Title => Main_title
@@ -33,11 +33,11 @@ $hd_iq $mol_book2
 				<= Main_tools
 			tools /
 				<= Sources $mol_link_source
-					uri \https://github.com/hd4ru/iq/
+					uri \https://github.com/giper-dev/iq/
 				<= Donate $mol_link_donate
 					uri \https://boosty.to/hyoo
 				<= Support $mol_link_support
-					uri \https://t.me/hd4ru/137
+					uri \https://t.me/giper-dev/137
 				<= Lights $mol_lights_toggle
 			Body_content => Main_body_content
 			body_content /

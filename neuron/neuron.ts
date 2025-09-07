@@ -1,6 +1,6 @@
 namespace $ {
 
-	export class $hd_iq_neuron< Value > extends Map< Value, $hd_iq_neuron< Value > > {
+	export class $gd_iq_neuron< Value > extends Map< Value, $gd_iq_neuron< Value > > {
 		
 		constructor(
 			public value: Value,
@@ -67,13 +67,13 @@ namespace $ {
 			const x =  pos - tail.depth
 			if( x < 0 ) return false
 			
-			tail.set( history[ x ], new $hd_iq_neuron( next, tail.depth + 1 ) )
+			tail.set( history[ x ], new $gd_iq_neuron( next, tail.depth + 1 ) )
 			
 			return true
 		}
 
 		/** Locate meaningful neuron for history. */
-		locate( history : ArrayLike<Value>, pos = history.length - 1 ): $hd_iq_neuron< Value > {
+		locate( history : ArrayLike<Value>, pos = history.length - 1 ): $gd_iq_neuron< Value > {
 			
 			if( pos < 0 ) return this
 			

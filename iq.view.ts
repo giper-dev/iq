@@ -1,6 +1,6 @@
 namespace $.$$ {
 
-	export class $hd_iq extends $.$hd_iq {
+	export class $gd_iq extends $.$gd_iq {
 
 		right() {
 			this.choice( 1 )

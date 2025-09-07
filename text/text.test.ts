@@ -3,7 +3,7 @@ namespace $.$$ {
 		
 		"text continuation"( $ ) {
 			
-			const chat = new $hd_iq_text
+			const chat = new $gd_iq_text
 			chat.remember( 'world in the fire' )
 			chat.remember( 'hello funny world' )
 						

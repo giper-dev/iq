@@ -1,6 +1,6 @@
 namespace $ {
 
-	$mol_style_define( $hd_iq , {
+	$mol_style_define( $gd_iq , {
 		
 		Main: {
 			

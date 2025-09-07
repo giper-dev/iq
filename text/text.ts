@@ -1,8 +1,8 @@
 namespace $ {
 	
-	export class $hd_iq_text extends Object {
+	export class $gd_iq_text extends Object {
 		
-		readonly brain = new $hd_iq_neuron( '' )
+		readonly brain = new $gd_iq_neuron( '' )
 
 		tokenize( text: string ) {
 			return text.split( /([\p{L}\d]+)/u ).filter( Boolean )
