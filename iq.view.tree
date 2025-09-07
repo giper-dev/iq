@@ -22,7 +22,7 @@ $gd_iq $mol_book2
 	pages /
 		<= Space $gd_web_frame
 		<= Main $mol_page
-			title <= title @ \Hyper IQ
+			title <= title @ \Giper IQ
 			Title => Main_title
 			Tools => Main_tools
 			head /
