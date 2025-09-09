@@ -21,7 +21,7 @@
 	pack canary git \https://github.com/giper-dev/canary.git
 	pack iq git \https://github.com/giper-dev/iq.git
 	pack lines git \https://github.com/giper-dev/lines.git
-	pack linguist git \https://github.com/giper-dev/linguist.git
+	pack lingua git \https://github.com/giper-dev/lingua.git
 	pack player git \https://github.com/giper-dev/player.git
 	pack search git \https://github.com/giper-dev/search.git
 	pack web git \https://github.com/giper-dev/web.git
