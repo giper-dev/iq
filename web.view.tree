@@ -81,8 +81,9 @@ $mol_frame $mol_embed_native
 	clipboard_write true
 
 $gd_web_frame $mol_frame
-	uri \https://web.giper.dev/#mol_lights={lights}/current={current}
-	- uri \http://localhost:9080/gd/web/bar/-/test.html#mol_lights={lights}/current={current}
+	uri \https://web.giper.dev/#mol_lights={lights}/current={current}/query={query}
+	- uri \http://localhost:9080/gd/web/bar/-/test.html#mol_lights={lights}/current={current}/query={query}
+	query \
 
 $mol_speck $mol_view
 	minimal_width 12

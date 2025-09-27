@@ -1157,10 +1157,12 @@ var $;
                         result = wrappers.get(result);
                     }
                     else {
-                        wrappers.set(result, result = Object.assign(result.finally(() => {
+                        const put = (v) => {
                             if (this.cache === result)
                                 this.absorb();
-                        }), { destructor: result.destructor || (() => { }) }));
+                            return v;
+                        };
+                        wrappers.set(result, result = Object.assign(result.then(put, put), { destructor: result.destructor || (() => { }) }));
                         const error = new Error(`Promise in ${this}`);
                         Object.defineProperty(result, 'stack', { get: () => error.stack });
                     }
@@ -1754,6 +1756,12 @@ var $;
             $mol_wire_atom.watching.add(this);
         }
         resync(args) {
+            for (let cursor = this.pub_from; cursor < this.sub_from; cursor += 2) {
+                const pub = this.data[cursor];
+                if (pub && pub instanceof $mol_wire_task) {
+                    pub.destructor();
+                }
+            }
             return this.put(this.task.call(this.host, ...args));
         }
         once() {
@@ -4590,7 +4598,10 @@ var $;
 ;
 	($.$gd_web_frame) = class $gd_web_frame extends ($.$mol_frame) {
 		uri(){
-			return "https://web.giper.dev/#mol_lights={lights}/current={current}";
+			return "https://web.giper.dev/#mol_lights={lights}/current={current}/query={query}";
+		}
+		query(){
+			return "";
 		}
 	};
 
@@ -4605,6 +4616,7 @@ var $;
             uri() {
                 return super.uri()
                     .replace('{lights}', String(this.$.$mol_lights()))
+                    .replace('{query}', encodeURIComponent(this.query()))
                     .replace('{current}', encodeURIComponent(this.$.$mol_state_arg.href().replace(/^https?:\/\/|\/?\??#.*$/, '')));
             }
         }
