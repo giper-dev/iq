@@ -37,7 +37,7 @@ $gd_iq $mol_book2
 				<= Donate $mol_link_donate
 					uri \https://boosty.to/hyoo
 				<= Support $mol_link_support
-					uri \https://t.me/giper-dev/137
+					uri \https://t.me/giper_web/137
 				<= Lights $mol_lights_toggle
 			Body_content => Main_body_content
 			body_content /
