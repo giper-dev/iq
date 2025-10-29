@@ -3765,9 +3765,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -3806,6 +3803,9 @@ var $;
         $$.$mol_scroll = $mol_scroll;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -3921,9 +3921,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -3999,6 +3996,9 @@ var $;
 (function ($) {
     $mol_style_attach("mol/book2/book2.view.css", "[mol_book2] {\n\tdisplay: flex;\n\tflex-flow: row nowrap;\n\talign-items: stretch;\n\tflex: 1 1 auto;\n\talign-self: stretch;\n\tmargin: 0;\n\t/* box-shadow: 0 0 0 1px var(--mol_theme_line); */\n\t/* transform: translateZ(0); */\n\ttransition: none;\n\tscroll-snap-type: x mandatory;\n\t/* padding: 0 1px;\n\tscroll-padding: 0 1px;\n\tgap: 1px; */\n}\n\n[mol_book2] > * {\n/* \tflex: none; */\n\tscroll-snap-stop: always;\n\tscroll-snap-align: end;\n\tposition: relative;\n\tmin-height: 100%;\n\tmax-height: 100%;\n\tmax-width: 100%;\n\tflex-shrink: 0;\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_field);\n}\n\n[mol_book2] > *:not(:first-of-type):before,\n[mol_book2] > *:not(:last-of-type)::after {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 1.5rem;\n\twidth: 3px;\n\theight: 1rem;\n\tbackground: linear-gradient(\n\t\tto bottom,\n\t\tvar(--mol_theme_special) 0%,\n\t\tvar(--mol_theme_special) 14%,\n\t\ttransparent 15%,\n\t\ttransparent 42%,\n\t\tvar(--mol_theme_special) 43%,\n\t\tvar(--mol_theme_special) 57%,\n\t\ttransparent 58%,\n\t\ttransparent 85%,\n\t\tvar(--mol_theme_special) 86%,\n\t\tvar(--mol_theme_special) 100%\n\t);\n\topacity: .5;\n\tz-index: var(--mol_layer_speck);\n}\n[mol_book2] > *:not(:first-of-type):before {\n\tleft: -3px;\n}\n[mol_book2] > *:not(:last-of-type)::after {\n\tright: -3px;\n}\n\n:where([mol_book2]) > * {\n\tbackground-color: var(--mol_theme_card);\n\t/* box-shadow: 0 0 0 1px var(--mol_theme_back); */\n}\n\n[mol_book2] > [mol_book2] {\n\tdisplay: contents;\n}\n\n[mol_book2] > *:first-child {\n\tscroll-snap-align: start;\n}\n\n[mol_book2] > [mol_view] {\n\ttransform: none; /* prevent content clipping */\n}\n\n[mol_book2_placeholder] {\n\tflex: 1 1 0;\n\tbackground: none;\n}\n\n[mol_book2_gap] {\n\tbackground: none;\n\tflex-grow: 1;\n\tscroll-snap-align: none;\n\tmargin-right: -1px;\n\tbox-shadow: none;\n}\n\n[mol_book2_gap]::before,\n[mol_book2_gap]::after {\n\tdisplay: none;\n}\n");
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -4095,9 +4095,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -4110,6 +4107,9 @@ var $;
         $$.$mol_theme_auto = $mol_theme_auto;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_hotkey) = class $mol_hotkey extends ($.$mol_plugin) {
@@ -4135,9 +4135,6 @@ var $;
 	};
 	($mol_mem(($.$mol_hotkey.prototype), "keydown"));
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -4169,6 +4166,9 @@ var $;
         $$.$mol_hotkey = $mol_hotkey;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_link) = class $mol_link extends ($.$mol_view) {
@@ -4238,9 +4238,6 @@ var $;
 	};
 	($mol_mem(($.$mol_link.prototype), "event_click"));
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -4320,6 +4317,9 @@ var $;
         $$.$mol_link = $mol_link;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -4428,9 +4428,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -4508,6 +4505,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_frame) = class $mol_frame extends ($.$mol_embed_native) {
 		allow(){
 			return "";
@@ -4552,9 +4552,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -4579,6 +4576,9 @@ var $;
         $$.$mol_frame = $mol_frame;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -4721,21 +4721,43 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
-var $node = $node || {};
-
-;
-"use strict";
 var $;
 (function ($) {
-    const TextEncoder = globalThis.TextEncoder ?? $node.util.TextEncoder;
-    const encoder = new TextEncoder();
-    function $mol_charset_encode(value) {
-        return encoder.encode(value);
+    let buf = new Uint8Array(2 ** 12);
+    function $mol_charset_encode(str) {
+        const capacity = str.length * 3;
+        if (buf.byteLength < capacity)
+            buf = new Uint8Array(capacity);
+        return buf.slice(0, $mol_charset_encode_to(str, buf));
     }
     $.$mol_charset_encode = $mol_charset_encode;
+    function $mol_charset_encode_to(str, buf, from = 0) {
+        let pos = from;
+        for (let i = 0; i < str.length; i++) {
+            let code = str.charCodeAt(i);
+            if (code < 0x80) {
+                buf[pos++] = code;
+            }
+            else if (code < 0x800) {
+                buf[pos++] = 0xc0 | (code >> 6);
+                buf[pos++] = 0x80 | (code & 0x3f);
+            }
+            else if (code < 0xd800 || code >= 0xe000) {
+                buf[pos++] = 0xe0 | (code >> 12);
+                buf[pos++] = 0x80 | ((code >> 6) & 0x3f);
+                buf[pos++] = 0x80 | (code & 0x3f);
+            }
+            else {
+                const point = ((code - 0xd800) << 10) + str.charCodeAt(++i) + 0x2400;
+                buf[pos++] = 0xf0 | (point >> 18);
+                buf[pos++] = 0x80 | ((point >> 12) & 0x3f);
+                buf[pos++] = 0x80 | ((point >> 6) & 0x3f);
+                buf[pos++] = 0x80 | (point & 0x3f);
+            }
+        }
+        return pos - from;
+    }
+    $.$mol_charset_encode_to = $mol_charset_encode_to;
 })($ || ($ = {}));
 
 ;
@@ -5625,9 +5647,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -5698,6 +5717,9 @@ var $;
 (function ($) {
     $mol_style_attach("mol/button/button.view.css", "[mol_button] {\n\tborder: none;\n\tfont: inherit;\n\tdisplay: inline-flex;\n\tflex-shrink: 0;\n\ttext-decoration: inherit;\n\tcursor: inherit;\n\tposition: relative;\n\tbox-sizing: border-box;\n\tword-break: normal;\n\tcursor: default;\n\tuser-select: none;\n\t-webkit-user-select: none;\n\tborder-radius: var(--mol_gap_round);\n\tbackground: transparent;\n\tcolor: inherit;\n}\n\n[mol_button]:where(:not(:disabled)):hover {\n\tz-index: var(--mol_layer_hover);\n}\n\n[mol_button]:focus {\n\toutline: none;\n\tz-index: var(--mol_layer_focus);\n}\n");
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_button_typed) = class $mol_button_typed extends ($.$mol_button) {
@@ -5783,9 +5805,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -5817,6 +5836,9 @@ var $;
         $$.$mol_svg = $mol_svg;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_svg_root) = class $mol_svg_root extends ($.$mol_svg) {
@@ -6051,9 +6073,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -6084,6 +6103,9 @@ var $;
         $$.$mol_button_share = $mol_button_share;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_chip) = class $mol_chip extends ($.$mol_view) {
@@ -6298,9 +6320,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -6329,6 +6348,9 @@ var $;
         $$.$mol_check = $mol_check;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_check_icon) = class $mol_check_icon extends ($.$mol_check) {};
@@ -6381,9 +6403,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -6396,6 +6415,9 @@ var $;
         $$.$mol_lights_toggle = $mol_lights_toggle;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_paragraph) = class $mol_paragraph extends ($.$mol_view) {
@@ -6416,9 +6438,6 @@ var $;
 		}
 	};
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -6474,6 +6493,9 @@ var $;
 (function ($) {
     $mol_style_attach("mol/paragraph/paragraph.view.css", ":where([mol_paragraph]) {\n\tmargin: 0;\n\tmax-width: 100%;\n}\n");
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_svg_group) = class $mol_svg_group extends ($.$mol_svg) {
@@ -6775,9 +6797,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -6857,6 +6876,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_plot_line) = class $mol_plot_line extends ($.$mol_plot_graph) {
 		curve(){
 			return "";
@@ -6888,9 +6910,6 @@ var $;
 	};
 	($mol_mem(($.$mol_plot_line.prototype), "Sample"));
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -6959,15 +6978,15 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_plot_fill) = class $mol_plot_fill extends ($.$mol_plot_line) {
 		threshold(){
 			return 4;
 		}
 	};
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -7003,6 +7022,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_plot_group) = class $mol_plot_group extends ($.$mol_plot_graph) {
 		graphs(){
 			return [];
@@ -7024,9 +7046,6 @@ var $;
 	};
 	($mol_mem(($.$mol_plot_group.prototype), "Sample"));
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -7094,6 +7113,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_svg_rect) = class $mol_svg_rect extends ($.$mol_svg) {
 		width(){
 			return "0";
@@ -7127,9 +7149,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7145,6 +7164,9 @@ var $;
         $$.$mol_svg_rect = $mol_svg_rect;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_svg_text) = class $mol_svg_text extends ($.$mol_svg) {
@@ -7189,9 +7211,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7214,6 +7233,9 @@ var $;
 (function ($) {
     $mol_style_attach("mol/svg/text/text.view.css", "[mol_svg_text] {\n\tfill: currentColor;\n\tstroke: none;\n}\n");
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_plot_ruler) = class $mol_plot_ruler extends ($.$mol_plot_graph) {
@@ -7354,9 +7376,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7450,6 +7469,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_plot_ruler_vert) = class $mol_plot_ruler_vert extends ($.$mol_plot_ruler) {
 		title_align(){
 			return "end";
@@ -7471,9 +7493,6 @@ var $;
 		}
 	};
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -7525,6 +7544,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_plot_ruler_hor) = class $mol_plot_ruler_hor extends ($.$mol_plot_ruler) {
 		title_align(){
 			return "start";
@@ -7546,9 +7568,6 @@ var $;
 		}
 	};
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -7606,6 +7625,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_gallery) = class $mol_gallery extends ($.$mol_view) {
 		items(){
 			return [];
@@ -7628,9 +7650,6 @@ var $;
 	};
 	($mol_mem_key(($.$mol_gallery.prototype), "Side"));
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -7677,6 +7696,9 @@ var $;
 (function ($) {
     $mol_style_attach("mol/gallery/gallery.view.css", "[mol_gallery] {\n\tflex-wrap: wrap;\n\tflex: 1 1 auto;\n\talign-items: stretch;\n    align-content: stretch;\n}\n");
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_chart_legend) = class $mol_chart_legend extends ($.$mol_scroll) {
@@ -7727,9 +7749,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7761,6 +7780,9 @@ var $;
 (function ($) {
     $mol_style_attach("mol/chart/legend/legend.view.css", "[mol_chart_legend] {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tflex-direction: row;\n\tflex: 0 1 auto;\n}\n\n[mol_chart_legend_graph_legend] {\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tflex: 1 1 8rem;\n\tpadding: .5rem;\n}\n\n[mol_chart_legend_graph_title] {\n\tmargin: 0 .25rem;\n\tflex: 1 1 auto;\n}\n\n[mol_chart_legend_graph_sample_box] {\n\tposition: relative;\n\twidth: 1.5rem;\n\tflex: none;\n}\n");
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_touch) = class $mol_touch extends ($.$mol_plugin) {
@@ -7942,9 +7964,6 @@ var $;
 	($mol_mem(($.$mol_touch.prototype), "draw"));
 	($mol_mem(($.$mol_touch.prototype), "draw_end"));
 
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -8193,6 +8212,9 @@ var $;
 })($ || ($ = {}));
 
 ;
+"use strict";
+
+;
 	($.$mol_plot_pane) = class $mol_plot_pane extends ($.$mol_svg_root) {
 		gap_x(){
 			const obj = new this.$.$mol_vector_range((this.gap_left()), (this.gap_right()));
@@ -8419,9 +8441,6 @@ var $;
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     var $$;
@@ -8628,6 +8647,9 @@ var $;
 (function ($) {
     $mol_style_attach("mol/plot/pane/pane.view.css", "[mol_plot_pane] {\n\tcolor: var(--mol_theme_control);\n\tflex: 1 1 auto;\n\talign-self: stretch;\n\tstroke-width: 2px;\n\tuser-select: none;\n}\n");
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_chart) = class $mol_chart extends ($.$mol_view) {
