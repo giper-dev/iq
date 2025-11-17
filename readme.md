@@ -26,5 +26,5 @@
 
 ```javascript
 for( let c of '101...' ) 
-$gd_iq.Root(0).choice( Number( c ) )
+$giper_iq.Root(0).choice( Number( c ) )
 ```

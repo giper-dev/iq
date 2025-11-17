@@ -1,6 +1,6 @@
 namespace $ {
 
-	$mol_style_define( $gd_iq , {
+	$mol_style_define( $giper_iq , {
 		
 		Main: {
 			

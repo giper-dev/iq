@@ -1,4 +1,4 @@
-$gd_iq $mol_book2
+$giper_iq $mol_book2
 	ranks *
 		XXL @ \😎 Mega Mind
 		XL @ \😏 Smart Ass
@@ -10,7 +10,7 @@ $gd_iq $mol_book2
 	required 200
 	history?val /number
 	auto /
-		<= Brain $gd_iq_neuron<number> / 0
+		<= Brain $giper_iq_neuron<number> / 0
 		<= score 0
 	plugins /
 		<= Theme $mol_theme_auto
@@ -20,7 +20,7 @@ $gd_iq $mol_book2
 				right?event <=> right?event
 	placeholders /
 	pages /
-		<= Space $gd_web_frame
+		<= Space $giper_web_frame
 		<= Main $mol_page
 			title <= title @ \Giper IQ
 			Title => Main_title

@@ -1,8 +1,8 @@
 namespace $ {
 	
-	export class $gd_iq_text extends Object {
+	export class $giper_iq_text extends Object {
 		
-		readonly brain = new $gd_iq_neuron( '' )
+		readonly brain = new $giper_iq_neuron( '' )
 
 		tokenize( text: string ) {
 			return text.split( /([\p{L}\d]+)/u ).filter( Boolean )
