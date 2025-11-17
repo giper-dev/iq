@@ -4011,7 +4011,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    class $gd_iq_neuron extends Map {
+    class $giper_iq_neuron extends Map {
         value;
         depth;
         constructor(value, depth = 0) {
@@ -4059,7 +4059,7 @@ var $;
             const x = pos - tail.depth;
             if (x < 0)
                 return false;
-            tail.set(history[x], new $gd_iq_neuron(next, tail.depth + 1));
+            tail.set(history[x], new $giper_iq_neuron(next, tail.depth + 1));
             return true;
         }
         locate(history, pos = history.length - 1) {
@@ -4080,7 +4080,7 @@ var $;
             return $mol_dev_format_accent($mol_dev_format_native(this), ' ', this.value);
         }
     }
-    $.$gd_iq_neuron = $gd_iq_neuron;
+    $.$giper_iq_neuron = $giper_iq_neuron;
 })($ || ($ = {}));
 
 ;
@@ -4600,7 +4600,7 @@ var $;
 })($ || ($ = {}));
 
 ;
-	($.$gd_web_frame) = class $gd_web_frame extends ($.$mol_frame) {
+	($.$giper_web_frame) = class $giper_web_frame extends ($.$mol_frame) {
 		uri(){
 			return "https://web.giper.dev/#mol_lights={lights}/current={current}/query={query}";
 		}
@@ -4616,7 +4616,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        class $gd_web_frame extends $.$gd_web_frame {
+        class $giper_web_frame extends $.$giper_web_frame {
             uri() {
                 return super.uri()
                     .replace('{lights}', String(this.$.$mol_lights()))
@@ -4626,8 +4626,8 @@ var $;
         }
         __decorate([
             $mol_mem
-        ], $gd_web_frame.prototype, "uri", null);
-        $$.$gd_web_frame = $gd_web_frame;
+        ], $giper_web_frame.prototype, "uri", null);
+        $$.$giper_web_frame = $giper_web_frame;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 
@@ -4635,7 +4635,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_attach("gd/web/frame/frame.view.css", "/* @keyframes gd_web_frame_show {\n\tfrom {\n\t\topacity: 0;\n\t}\n}\n\n[gd_web_frame] {\n\tanimation: 5s -1s ease-in gd_web_frame_show;\n} */\n");
+    $mol_style_attach("giper/web/frame/frame.view.css", "/* @keyframes giper_web_frame_show {\n\tfrom {\n\t\topacity: 0;\n\t}\n}\n\n[giper_web_frame] {\n\tanimation: 5s -1s ease-in giper_web_frame_show;\n} */\n");
 })($ || ($ = {}));
 
 ;
@@ -4647,7 +4647,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        $mol_style_define($gd_web_frame, {
+        $mol_style_define($giper_web_frame, {
             flex: {
                 basis: '4rem',
                 shrink: 0,
@@ -9058,9 +9058,9 @@ var $;
 })($ || ($ = {}));
 
 ;
-	($.$gd_iq) = class $gd_iq extends ($.$mol_book2) {
+	($.$giper_iq) = class $giper_iq extends ($.$mol_book2) {
 		Brain(){
-			const obj = new this.$.$gd_iq_neuron(0);
+			const obj = new this.$.$giper_iq_neuron(0);
 			return obj;
 		}
 		score(){
@@ -9076,11 +9076,11 @@ var $;
 			return obj;
 		}
 		Space(){
-			const obj = new this.$.$gd_web_frame();
+			const obj = new this.$.$giper_web_frame();
 			return obj;
 		}
 		title(){
-			return (this.$.$mol_locale.text("$gd_iq_title"));
+			return (this.$.$mol_locale.text("$giper_iq_title"));
 		}
 		Main_title(){
 			return (this.Main().Title());
@@ -9185,7 +9185,7 @@ var $;
 			return obj;
 		}
 		description(){
-			return (this.$.$mol_locale.text("$gd_iq_description"));
+			return (this.$.$mol_locale.text("$giper_iq_description"));
 		}
 		History_log(){
 			const obj = new this.$.$mol_scroll();
@@ -9193,7 +9193,7 @@ var $;
 			return obj;
 		}
 		left_title(){
-			return (this.$.$mol_locale.text("$gd_iq_left_title"));
+			return (this.$.$mol_locale.text("$giper_iq_left_title"));
 		}
 		left(next){
 			if(next !== undefined) return next;
@@ -9206,7 +9206,7 @@ var $;
 			return obj;
 		}
 		right_title(){
-			return (this.$.$mol_locale.text("$gd_iq_right_title"));
+			return (this.$.$mol_locale.text("$giper_iq_right_title"));
 		}
 		right(next){
 			if(next !== undefined) return next;
@@ -9247,13 +9247,13 @@ var $;
 		}
 		ranks(){
 			return {
-				"XXL": (this.$.$mol_locale.text("$gd_iq_ranks_XXL")), 
-				"XL": (this.$.$mol_locale.text("$gd_iq_ranks_XL")), 
-				"L": (this.$.$mol_locale.text("$gd_iq_ranks_L")), 
-				"M": (this.$.$mol_locale.text("$gd_iq_ranks_M")), 
-				"S": (this.$.$mol_locale.text("$gd_iq_ranks_S")), 
-				"XS": (this.$.$mol_locale.text("$gd_iq_ranks_XS")), 
-				"XXS": (this.$.$mol_locale.text("$gd_iq_ranks_XXS"))
+				"XXL": (this.$.$mol_locale.text("$giper_iq_ranks_XXL")), 
+				"XL": (this.$.$mol_locale.text("$giper_iq_ranks_XL")), 
+				"L": (this.$.$mol_locale.text("$giper_iq_ranks_L")), 
+				"M": (this.$.$mol_locale.text("$giper_iq_ranks_M")), 
+				"S": (this.$.$mol_locale.text("$giper_iq_ranks_S")), 
+				"XS": (this.$.$mol_locale.text("$giper_iq_ranks_XS")), 
+				"XXS": (this.$.$mol_locale.text("$giper_iq_ranks_XXS"))
 			};
 		}
 		required(){
@@ -9276,35 +9276,35 @@ var $;
 			return [(this.Space()), (this.Main())];
 		}
 	};
-	($mol_mem(($.$gd_iq.prototype), "Brain"));
-	($mol_mem(($.$gd_iq.prototype), "Theme"));
-	($mol_mem(($.$gd_iq.prototype), "Hotkey"));
-	($mol_mem(($.$gd_iq.prototype), "Space"));
-	($mol_mem(($.$gd_iq.prototype), "Share"));
-	($mol_mem(($.$gd_iq.prototype), "Caption"));
-	($mol_mem(($.$gd_iq.prototype), "Score"));
-	($mol_mem(($.$gd_iq.prototype), "Sources"));
-	($mol_mem(($.$gd_iq.prototype), "Donate"));
-	($mol_mem(($.$gd_iq.prototype), "Support"));
-	($mol_mem(($.$gd_iq.prototype), "Lights"));
-	($mol_mem(($.$gd_iq.prototype), "Score_final"));
-	($mol_mem(($.$gd_iq.prototype), "Score_line"));
-	($mol_mem(($.$gd_iq.prototype), "Score_fill"));
-	($mol_mem(($.$gd_iq.prototype), "score_series"));
-	($mol_mem(($.$gd_iq.prototype), "Score_log"));
-	($mol_mem(($.$gd_iq.prototype), "Bad"));
-	($mol_mem(($.$gd_iq.prototype), "Good"));
-	($mol_mem(($.$gd_iq.prototype), "Ruler_vert"));
-	($mol_mem(($.$gd_iq.prototype), "Ruler_hor"));
-	($mol_mem(($.$gd_iq.prototype), "Stats"));
-	($mol_mem(($.$gd_iq.prototype), "History_log"));
-	($mol_mem(($.$gd_iq.prototype), "left"));
-	($mol_mem(($.$gd_iq.prototype), "Left"));
-	($mol_mem(($.$gd_iq.prototype), "right"));
-	($mol_mem(($.$gd_iq.prototype), "Right"));
-	($mol_mem(($.$gd_iq.prototype), "Choices"));
-	($mol_mem(($.$gd_iq.prototype), "Main"));
-	($mol_mem(($.$gd_iq.prototype), "history"));
+	($mol_mem(($.$giper_iq.prototype), "Brain"));
+	($mol_mem(($.$giper_iq.prototype), "Theme"));
+	($mol_mem(($.$giper_iq.prototype), "Hotkey"));
+	($mol_mem(($.$giper_iq.prototype), "Space"));
+	($mol_mem(($.$giper_iq.prototype), "Share"));
+	($mol_mem(($.$giper_iq.prototype), "Caption"));
+	($mol_mem(($.$giper_iq.prototype), "Score"));
+	($mol_mem(($.$giper_iq.prototype), "Sources"));
+	($mol_mem(($.$giper_iq.prototype), "Donate"));
+	($mol_mem(($.$giper_iq.prototype), "Support"));
+	($mol_mem(($.$giper_iq.prototype), "Lights"));
+	($mol_mem(($.$giper_iq.prototype), "Score_final"));
+	($mol_mem(($.$giper_iq.prototype), "Score_line"));
+	($mol_mem(($.$giper_iq.prototype), "Score_fill"));
+	($mol_mem(($.$giper_iq.prototype), "score_series"));
+	($mol_mem(($.$giper_iq.prototype), "Score_log"));
+	($mol_mem(($.$giper_iq.prototype), "Bad"));
+	($mol_mem(($.$giper_iq.prototype), "Good"));
+	($mol_mem(($.$giper_iq.prototype), "Ruler_vert"));
+	($mol_mem(($.$giper_iq.prototype), "Ruler_hor"));
+	($mol_mem(($.$giper_iq.prototype), "Stats"));
+	($mol_mem(($.$giper_iq.prototype), "History_log"));
+	($mol_mem(($.$giper_iq.prototype), "left"));
+	($mol_mem(($.$giper_iq.prototype), "Left"));
+	($mol_mem(($.$giper_iq.prototype), "right"));
+	($mol_mem(($.$giper_iq.prototype), "Right"));
+	($mol_mem(($.$giper_iq.prototype), "Choices"));
+	($mol_mem(($.$giper_iq.prototype), "Main"));
+	($mol_mem(($.$giper_iq.prototype), "history"));
 
 
 ;
@@ -9430,7 +9430,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        class $gd_iq extends $.$gd_iq {
+        class $giper_iq extends $.$giper_iq {
             right() {
                 this.choice(1);
             }
@@ -9483,20 +9483,20 @@ var $;
         }
         __decorate([
             $mol_mem
-        ], $gd_iq.prototype, "history_log", null);
+        ], $giper_iq.prototype, "history_log", null);
         __decorate([
             $mol_mem
-        ], $gd_iq.prototype, "wins", null);
+        ], $giper_iq.prototype, "wins", null);
         __decorate([
             $mol_mem
-        ], $gd_iq.prototype, "score", null);
+        ], $giper_iq.prototype, "score", null);
         __decorate([
             $mol_mem
-        ], $gd_iq.prototype, "score_final", null);
+        ], $giper_iq.prototype, "score_final", null);
         __decorate([
             $mol_mem
-        ], $gd_iq.prototype, "rank", null);
-        $$.$gd_iq = $gd_iq;
+        ], $giper_iq.prototype, "rank", null);
+        $$.$giper_iq = $giper_iq;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 
@@ -9504,7 +9504,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_define($gd_iq, {
+    $mol_style_define($giper_iq, {
         Main: {
             flex: {
                 basis: '40rem',

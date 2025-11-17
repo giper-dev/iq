@@ -1,6 +1,6 @@
 \/
 	pack bun git \https://github.com/spleekz/mam_bun.git
-	pack gd git \https://github.com/giper-dev/gd.git
+	pack giper git \https://github.com/giper-dev/gd.git
 	pack hyoo git \https://github.com/hyoo-ru/mam_hyoo.git
 	pack iva git \https://github.com/thenesterov/mam_iva.git
 	pack jin git \https://github.com/nin-jin/mam_jin.git
@@ -17,7 +17,7 @@
 	pack apxu git \https://github.com/ApxuTechTop/apxu
 	pack bog git \https://github.com/best-online-games/bog.git
 	pack mws git \https://github.com/reatailret/milkywaystd_mol.git
-\/gd
+\/giper
 	pack balls git \https://github.com/giper-dev/balls.git
 	pack bot git \https://github.com/giper-dev/bot.git
 	pack canary git \https://github.com/giper-dev/canary.git
@@ -31,5 +31,5 @@
 	pack icon git \https://github.com/nin-jin/mol_icon.git
 \/mol/view
 	include \/mol/view/tree/test
-\/gd/iq
+\/giper/iq
 	include \/mol/offline/install

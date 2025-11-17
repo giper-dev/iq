@@ -1,5 +1,5 @@
 {
-  "name": "gd_iq",
+  "name": "giper_iq",
   "version": "0.0.1",
   "exports": {
     "node": {
@@ -15,8 +15,8 @@
   "browser": "./web.js",
   "types": "./web.d.ts",
   "keywords": [
-    "$gd_iq",
-    "$gd",
+    "$giper_iq",
+    "$giper",
     "$mol_book2",
     "$mol",
     "$mol_scroll",
@@ -148,13 +148,13 @@
     "$mol_style_sheet",
     "$mol_layer",
     "$mol_type_enforce",
-    "$gd_iq_neuron",
+    "$giper_iq_neuron",
     "$mol_theme_auto",
     "$mol_hotkey",
     "$mol_keyboard_code",
     "$mol_keyboard",
-    "$gd_web_frame",
-    "$gd_web",
+    "$giper_web_frame",
+    "$giper_web",
     "$mol_frame",
     "$mol_embed_native",
     "$mol_embed",
