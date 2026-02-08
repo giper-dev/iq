@@ -4061,6 +4061,60 @@ var $;
             this.value = value;
             this.depth = depth;
         }
+        pack(history, codes) {
+            const packed = [];
+            let predicted = 0;
+            const commit = () => {
+                if (!predicted)
+                    return;
+                if (predicted === 1) {
+                    packed.push(history[pos - 1]);
+                }
+                else {
+                    packed.push(codes[predicted - 2]);
+                }
+                predicted = 0;
+            };
+            for (var pos = 0; pos < history.length; ++pos) {
+                const item = history[pos];
+                if (this.predict(history, pos - 1) === item) {
+                    ++predicted;
+                    if (predicted > codes.length)
+                        commit();
+                }
+                else {
+                    commit();
+                    if (codes.indexOf(item) !== -1)
+                        packed.push(codes[0]);
+                    packed.push(item);
+                }
+            }
+            commit();
+            return packed;
+        }
+        take(packed, codes) {
+            const taken = [];
+            for (let i = 0; i < packed.length; ++i) {
+                const item = packed[i];
+                const index = codes.indexOf(item);
+                if (index == -1) {
+                    taken.push(item);
+                }
+                else {
+                    const next = packed[i + 1];
+                    if ((index === 0) && (codes.indexOf(next) !== -1)) {
+                        taken.push(next);
+                        ++i;
+                    }
+                    else {
+                        for (let j = 0; j < index + 2; ++j) {
+                            taken.push(this.predict(taken));
+                        }
+                    }
+                }
+            }
+            return taken;
+        }
         generate(limit, history = []) {
             const story = Array.from(history);
             for (let i = 0; i < limit; ++i) {

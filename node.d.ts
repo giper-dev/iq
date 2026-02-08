@@ -1508,6 +1508,8 @@ declare namespace $ {
         value: Value;
         depth: number;
         constructor(value: Value, depth?: number);
+        pack(history: ArrayLike<Value>, codes: readonly Value[]): readonly Value[];
+        take(packed: ArrayLike<Value>, codes: readonly Value[]): readonly Value[];
         generate(limit: number, history?: ArrayLike<Value>): readonly Value[];
         predict(history: ArrayLike<Value>, pos?: number): Value;
         remember(history: ArrayLike<Value>): boolean;
