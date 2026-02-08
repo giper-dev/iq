@@ -9,6 +9,64 @@ namespace $ {
 			super()
 		}
 		
+		/** Compresses history using prediction and multiple escape values. */
+		pack( history: ArrayLike<Value>, codes: readonly Value[] ): readonly Value[] {
+			
+			const packed = [] 
+			let predicted = 0
+			
+			const commit = ()=> {
+				if( !predicted ) return
+				if( predicted === 1 ) {
+					packed.push( history[ pos - 1 ] )
+				} else {
+					packed.push( codes[ predicted - 2 ] )
+				}
+				predicted = 0
+			}
+			
+			for( var pos = 0; pos < history.length; ++ pos ) {
+				const item = history[pos]
+				if( this.predict( history, pos - 1 ) === item ) { // predicted
+					++ predicted
+					if( predicted > codes.length ) commit()
+				} else { // raw
+					commit()
+					if( codes.indexOf( item ) !== -1 ) packed.push( codes[0] ) // escaping
+					packed.push( item )
+				}
+			}
+			commit()
+
+			return packed
+		}
+		
+		/** Revives history from compressed form using same prediction and escape codes. */
+		take( packed: ArrayLike<Value>, codes: readonly Value[] ): readonly Value[] {
+			
+			const taken = [] as Value[]
+			
+			for( let i = 0; i < packed.length; ++i ) {
+				const item = packed[i]
+				const index = codes.indexOf( item )
+				if( index == -1 ) { // raw
+					taken.push( item )
+				} else {
+					const next = packed[ i + 1 ]
+					if(( index === 0 )&&( codes.indexOf( next ) !== -1 )) { // escaped
+						taken.push( next )
+						++ i
+					} else { // predicted
+						for( let j = 0; j < index + 2; ++ j ) {
+							taken.push( this.predict( taken ) )
+						}
+					}
+				}
+			}
+			
+			return taken
+		}
+		
 		/** Generate story which continuous history. */
 		generate( limit: number, history: ArrayLike<Value> = [] ): readonly Value[] {
 			

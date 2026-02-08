@@ -136,5 +136,23 @@ namespace $ {
 			
 		},
 
+		'String compression'() {
+			
+			const brain = new $giper_iq_neuron('')
+			brain.remember( 'в сырой темнице сидел я, однажды, и на студённую зиму смотрел через решётку' )
+			brain.remember( 'решка по темечку сильно один раз резко и смачно стукнула' )
+			
+			const codes = [ ... '1234567890' ]
+			
+			const text = 'однажды, в студённую зимнюю пору, сижу за решёткой в темнице сырой'
+			$mol_assert_equal( text.length, 66 )
+			
+			const pack = brain.pack( text, codes )
+			$mol_assert_equal( pack.length, 42 )
+			
+			$mol_assert_equal( brain.take( pack, codes ).join(''), text )
+			
+		},
+
 	})
 }
