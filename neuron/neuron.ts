@@ -2,8 +2,15 @@ namespace $ {
 
 	export class $giper_iq_neuron< Value > extends Map< Value, $giper_iq_neuron< Value > > {
 		
+		/** Count of learning activation. */
+		width = 1
+		/** Count of subtree nodes including itself. */
+		count = 1
+		
 		constructor(
+			/** Prediction for next value. */
 			public value: Value,
+			/** How far from history end. */
 			public depth = 0,
 		) {
 			super()
@@ -119,43 +126,73 @@ namespace $ {
 				
 			}
 			
-			const tail = this.locate( history, pos )
+			const path = [] as $giper_iq_neuron<Value>[]
+			const tail = this.locate( history, pos, path )
+			for( const point of path ) ++ point.width
+			
 			if( tail.value === next && !tail.size ) return false
 			
 			const x =  pos - tail.depth
 			if( x < 0 ) return false
 			
 			tail.set( history[ x ], new $giper_iq_neuron( next, tail.depth + 1 ) )
+			for( const point of path ) ++ point.count
 			
 			return true
 		}
+		
+		/** Limit neurons count. */
+		limit( max: number ) {
+			if( max < 1 ) return $mol_fail( new Error( 'Too low limit', { cause: { max } } ) )
+			while( this.count > max ) this.shrink()
+		}
+		
+		/** Cut one least activated neuron. */
+		shrink() {
+			
+			let best_way = undefined as undefined | Value
+			let best_kid = undefined as undefined | $giper_iq_neuron<Value>
+			
+			for( const [ way, kid ] of this ) {
+				
+				if( best_kid ) if( best_kid.width <= kid.width ) continue
+				
+				best_way = way
+				best_kid = kid
+				
+			}
+			
+			if( best_kid!.count === 1 ) this.delete( best_way! )
+			else best_kid!.shrink()
+			
+			-- this.count
+			
+		}
 
 		/** Locate meaningful neuron for history. */
-		locate( history : ArrayLike<Value>, pos = history.length - 1 ): $giper_iq_neuron< Value > {
+		locate( history : ArrayLike<Value>, pos = history.length - 1, path?: $giper_iq_neuron<Value>[] ): $giper_iq_neuron< Value > {
+			
+			path?.push( this )
 			
 			if( pos < 0 ) return this
 			
 			const kid = this.get( history[ pos ] )
 			if( !kid ) return this
 			
-			return kid.locate( history, pos - 1 )
+			return kid.locate( history, pos - 1, path )
 			
 		}
 
-		/** Count of neurons in subtree. */
-		population(): number {
-			return 1 + [ ... this.values() ].reduce( ( sum, kid )=> kid ? sum + kid.population() : sum, 0 )
-		}
-		
 		toJSON() {
 			return { val: this.value, way: [ ... this ] }
 		}
 
 		[ $mol_dev_format_head ]() {
-			return $mol_dev_format_accent(
+			return $mol_dev_format_div( {},
 				$mol_dev_format_native( this ),
-				' ',
-				this.value,
+				$mol_dev_format_accent( ' v=', this.value ),
+				$mol_dev_format_shade( ' w=', this.width ),
+				$mol_dev_format_shade( ' c=', this.count ),
 			)
 		}
 		
