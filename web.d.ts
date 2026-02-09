@@ -1282,6 +1282,8 @@ declare namespace $ {
     class $giper_iq_neuron<Value> extends Map<Value, $giper_iq_neuron<Value>> {
         value: Value;
         depth: number;
+        width: number;
+        count: number;
         constructor(value: Value, depth?: number);
         pack(history: ArrayLike<Value>, codes: readonly Value[]): readonly Value[];
         take(packed: ArrayLike<Value>, codes: readonly Value[]): readonly Value[];
@@ -1290,8 +1292,9 @@ declare namespace $ {
         remember(history: ArrayLike<Value>): boolean;
         study(history: ArrayLike<Value>): boolean;
         learn(next: Value, history: ArrayLike<Value>, pos?: number): boolean;
-        locate(history: ArrayLike<Value>, pos?: number): $giper_iq_neuron<Value>;
-        population(): number;
+        limit(max: number): undefined;
+        shrink(): void;
+        locate(history: ArrayLike<Value>, pos?: number, path?: $giper_iq_neuron<Value>[]): $giper_iq_neuron<Value>;
         toJSON(): {
             val: Value;
             way: [Value, $giper_iq_neuron<Value>][];

@@ -4056,6 +4056,8 @@ var $;
     class $giper_iq_neuron extends Map {
         value;
         depth;
+        width = 1;
+        count = 1;
         constructor(value, depth = 0) {
             super();
             this.value = value;
@@ -4149,31 +4151,56 @@ var $;
                 this.value = next;
                 return true;
             }
-            const tail = this.locate(history, pos);
+            const path = [];
+            const tail = this.locate(history, pos, path);
+            for (const point of path)
+                ++point.width;
             if (tail.value === next && !tail.size)
                 return false;
             const x = pos - tail.depth;
             if (x < 0)
                 return false;
             tail.set(history[x], new $giper_iq_neuron(next, tail.depth + 1));
+            for (const point of path)
+                ++point.count;
             return true;
         }
-        locate(history, pos = history.length - 1) {
+        limit(max) {
+            if (max < 1)
+                return $mol_fail(new Error('Too low limit', { cause: { max } }));
+            while (this.count > max)
+                this.shrink();
+        }
+        shrink() {
+            let best_way = undefined;
+            let best_kid = undefined;
+            for (const [way, kid] of this) {
+                if (best_kid)
+                    if (best_kid.width <= kid.width)
+                        continue;
+                best_way = way;
+                best_kid = kid;
+            }
+            if (best_kid.count === 1)
+                this.delete(best_way);
+            else
+                best_kid.shrink();
+            --this.count;
+        }
+        locate(history, pos = history.length - 1, path) {
+            path?.push(this);
             if (pos < 0)
                 return this;
             const kid = this.get(history[pos]);
             if (!kid)
                 return this;
-            return kid.locate(history, pos - 1);
-        }
-        population() {
-            return 1 + [...this.values()].reduce((sum, kid) => kid ? sum + kid.population() : sum, 0);
+            return kid.locate(history, pos - 1, path);
         }
         toJSON() {
             return { val: this.value, way: [...this] };
         }
         [$mol_dev_format_head]() {
-            return $mol_dev_format_accent($mol_dev_format_native(this), ' ', this.value);
+            return $mol_dev_format_div({}, $mol_dev_format_native(this), $mol_dev_format_accent(' v=', this.value), $mol_dev_format_shade(' w=', this.width), $mol_dev_format_shade(' c=', this.count));
         }
     }
     $.$giper_iq_neuron = $giper_iq_neuron;
