@@ -1,6 +1,6 @@
 namespace $.$$ {
 
-	export class $giper_iq extends $.$giper_iq {
+	export class $giper_iq_app extends $.$giper_iq_app {
 
 		right() {
 			this.choice( 1 )
